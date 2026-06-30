@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thinking Lab Content"
+  short_description: "Run Thinking Lab dialog-first content flow."
+  default_prompt: "Use Thinking Lab to turn a topic into a researched Russian content draft or output plan."

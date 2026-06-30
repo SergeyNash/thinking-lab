@@ -456,6 +456,57 @@ flowchart LR
 
 ---
 
+## Как создать контент через диалог
+
+Thinking Lab должен уметь работать нативно из обычного диалога.
+
+Например, можно сказать:
+
+> Сделай Telegram-пост про почему SQL жив 50 лет.
+
+или:
+
+> Хочу LinkedIn-пост про KPI, но через инженерное управление.
+
+В таком запросе система должна различить несколько вещей:
+
+- тему или артефакт;
+- исследовательскую оптику;
+- желаемый output type;
+- аудиторию;
+- глубину;
+- зрелость исследования.
+
+Это описано в [orchestration/CONTENT_FLOW.md](orchestration/CONTENT_FLOW.md).
+
+Базовые output types v0.1:
+
+- `telegram_note`;
+- `linkedin_post`;
+- `essay`;
+- `working_note`;
+- `unfinished_research`;
+- `failure_analysis`.
+
+Важно: выбранный формат не отменяет исследование.
+
+Если пользователь просит Telegram-пост, но тема ещё слабая, система не должна
+делать уверенный пост из воздуха. Она может предложить короткий research pass,
+working note или unfinished research.
+
+Для этого в репозитории есть project-local skill:
+
+- [skills/thinking-lab-content/SKILL.md](skills/thinking-lab-content/SKILL.md)
+
+Он нужен не для того, чтобы “быстро писать посты”, а чтобы запускать правильный
+маршрут:
+
+```text
+dialogue -> intake -> research routing -> output decision -> draft or outline
+```
+
+---
+
 ## Связь Knowledge, Modules и Communication
 
 Knowledge хранит память, Modules выполняют исследовательские функции,
@@ -523,6 +574,9 @@ communication/
   STYLE.md
   FORMATS.md
 
+orchestration/
+  CONTENT_FLOW.md
+
 modules/
   MODULES.md
   archaeologist.md
@@ -531,6 +585,13 @@ modules/
   transfer.md
   synthesizer.md
   editor.md
+
+skills/
+  thinking-lab-content/
+    SKILL.md
+
+outputs/
+  draft and output artifacts
 
 context/
   Thinking_Lab_Discussion_Summary.md
@@ -626,6 +687,11 @@ Git победил не только потому, что был быстрым,
 
 Humanized product voice и JTBD-оптика зафиксированы в
 [communication/STYLE.md](communication/STYLE.md).
+
+Dialog-first content flow зафиксирован в
+[orchestration/CONTENT_FLOW.md](orchestration/CONTENT_FLOW.md), а project-local
+skill для запуска этого флоу находится в
+[skills/thinking-lab-content/SKILL.md](skills/thinking-lab-content/SKILL.md).
 
 Проект сейчас находится в фазе раннего практического использования: архитектура
 уже есть, но она должна проверяться на реальных исследованиях, а не только на

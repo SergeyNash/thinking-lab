@@ -64,6 +64,8 @@ If an output is adapted for an English-speaking context, record that explicitly.
 
 Status:
 Format:
+Requested output type:
+Actual output decision:
 Language:
 Related research:
 Related topic:
@@ -104,10 +106,12 @@ Thinking Lab artifact.
 
 ## 8. Seed Output
 
-## Git and the cost of experimentation — Telegram note
+## Git and the cost of experimentation - Telegram note
 
 Status: draft candidate  
 Format: Telegram note  
+Requested output type: telegram_note
+Actual output decision: telegram_note draft candidate
 Language: Russian  
 Related research: Research: Why did Git win?  
 Related topic: Why did Git win?  
@@ -119,10 +123,12 @@ Publication surface: Telegram
 Link or location: none  
 What changed after publication: not applicable
 
-## Git as a model of experimentation cost — LinkedIn post
+## Git as a model of experimentation cost - LinkedIn post
 
 Status: draft candidate  
 Format: LinkedIn post  
+Requested output type: linkedin_post
+Actual output decision: linkedin_post draft candidate
 Language: Russian  
 Related research: Research: Why did Git win?  
 Related topic: Why did Git win?  

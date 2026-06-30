@@ -421,6 +421,9 @@ communication/
   STYLE.md
   FORMATS.md
 
+orchestration/
+  CONTENT_FLOW.md
+
 modules/
   MODULES.md
   archaeologist.md
@@ -430,8 +433,12 @@ modules/
   synthesizer.md
   editor.md
 
-archive/
-  exploratory drafts
+skills/
+  thinking-lab-content/
+    SKILL.md
+
+outputs/
+  draft and output artifacts
 ```
 
 This structure is intentionally lightweight.
@@ -464,6 +471,35 @@ Automation may be added later for:
 - archive management.
 
 Automation should not be added before the reasoning process is understood.
+
+### 6.5. Orchestration
+
+Orchestration coordinates the existing layers during real use.
+
+It does not replace:
+
+- Knowledge;
+- Reasoning Modules;
+- Communication;
+- output decisions.
+
+The current orchestration document is:
+
+- `orchestration/CONTENT_FLOW.md`
+
+The current project-local orchestration skill is:
+
+- `skills/thinking-lab-content/SKILL.md`
+
+This skill supports dialog-first content creation:
+
+```text
+dialogue -> intake -> research routing -> module pass -> output decision -> draft or outline
+```
+
+The user may request a content format directly, but the system must still
+protect research quality. A requested Telegram post, LinkedIn post, essay, or
+failure analysis is an output preference, not permission to skip reasoning.
 
 ---
 
@@ -653,7 +689,8 @@ The initial system layers have been created:
 - reasoning;
 - knowledge;
 - communication;
-- modules.
+- modules;
+- orchestration.
 
 The architecture is still expected to evolve through feedback from real use.
 

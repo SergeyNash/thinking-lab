@@ -23,6 +23,15 @@ It should preserve the insight while adapting:
 - degree of completeness;
 - platform expectations.
 
+The supported output types in v0.1 are:
+
+- `telegram_note`;
+- `linkedin_post`;
+- `essay`;
+- `working_note`;
+- `unfinished_research`;
+- `failure_analysis`.
+
 ---
 
 ## 2. What Belongs Here
@@ -211,7 +220,118 @@ Quality check:
 
 ---
 
-## 8. Format Selection
+## 8. Working Note
+
+A working note is an internal or semi-private artifact.
+
+Use it when:
+
+- the idea is useful but not public-ready;
+- research needs to be preserved before it becomes a post or essay;
+- the system needs a place for partial reasoning;
+- the output is meant to help future thinking, not perform publicly.
+
+Typical shape:
+
+```markdown
+Topic:
+Why this matters:
+Current understanding:
+What seems weak:
+Useful examples:
+Possible principle:
+Next research step:
+```
+
+Quality check:
+
+- honest about uncertainty;
+- useful for future research;
+- does not pretend to be a finished public argument;
+- connected to `knowledge/RESEARCH_NOTES.md`.
+
+---
+
+## 9. Unfinished Research
+
+Unfinished research is a deliberate format, not a failed essay.
+
+Use it when:
+
+- the thinking process itself is valuable;
+- the question is alive but not settled;
+- the reader can benefit from seeing the path;
+- uncertainty should remain visible.
+
+Typical opening:
+
+```text
+Я уже неделю думаю вот об этом...
+```
+
+Typical shape:
+
+```markdown
+<live question>
+
+<why it keeps bothering me>
+
+<what I have checked so far>
+
+<where the explanation is still weak>
+
+<possible principle>
+
+<open question>
+```
+
+Quality check:
+
+- does not fake closure;
+- shows the reasoning path;
+- avoids vague diary writing;
+- keeps the artifact, system, or principle visible.
+
+---
+
+## 10. Failure Analysis
+
+Failure analysis studies why something did not work.
+
+Use it when:
+
+- an idea, product, process, architecture, or organization failed;
+- the failure reveals constraints better than a success case;
+- the explanation may expose a reusable principle;
+- the goal is learning, not blame.
+
+Typical shape:
+
+```markdown
+<what failed>
+
+<why the obvious explanation is incomplete>
+
+<context and constraints>
+
+<mechanism of failure>
+
+<what this teaches>
+
+<principle or warning>
+```
+
+Quality check:
+
+- no moralizing;
+- no hindsight-only explanation;
+- constraints are visible;
+- failure mechanism is specific;
+- principle is useful beyond the case.
+
+---
+
+## 11. Format Selection
 
 Choose the smallest format that preserves the idea.
 
@@ -221,6 +341,10 @@ Use:
 - LinkedIn when the idea is professionally relevant and self-contained.
 - Essay when context, evidence, and counterarguments matter.
 - Talk/note when discussion should improve the idea.
+- Working note when the idea is useful but not public-ready.
+- Unfinished research when the thinking process is itself worth showing.
+- Failure analysis when a failed system explains the world better than a
+  success case.
 
 Do not expand a weak idea into an essay.
 
@@ -228,7 +352,7 @@ Do not compress a complex investigation into a shallow post.
 
 ---
 
-## 9. Smoke Test: Git Principle Across Formats
+## 12. Smoke Test: Git Principle Across Formats
 
 Core principle:
 
@@ -265,7 +389,7 @@ Develop the full investigation:
 
 ---
 
-## 10. Summary
+## 13. Summary
 
 Formats are adapters.
 
