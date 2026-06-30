@@ -236,6 +236,8 @@ Avoid overusing patterns like:
 - "it is not simple";
 - "the interesting part is not...";
 - "this is true, but...";
+- "the problem is not A, the problem is B";
+- "not because A, but because B".
 
 These moves can be useful once in a text, especially when they clarify a weak
 common explanation. If they appear repeatedly, rewrite the passage as ordinary
@@ -243,6 +245,27 @@ reasoning in paragraphs.
 
 The preferred feeling is not a sequence of punchlines. It is a person
 explaining how they arrived at a sharper view.
+
+In Russian product writing, avoid the translated pattern:
+
+```text
+Проблема не в том, что A.
+Проблема в том, что B.
+```
+
+This often sounds like an English explanatory template. Prefer a causal,
+concrete explanation:
+
+```text
+Со стороны кажется, что безопасность просто тормозит релиз. Но к этому моменту
+команда уже выбрала решение, написала код, договорилась о сроках и почти дошла
+до выкатки. Любой найденный риск теперь стоит дорого, потому что он появился в
+разговоре слишком поздно.
+```
+
+The same rule applies to product examples. Do not use abstract placeholder
+examples such as "added a setting", "improved a screen", or "made a flow
+faster" when a concrete product situation would be more human.
 
 ---
 

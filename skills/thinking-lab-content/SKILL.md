@@ -202,7 +202,28 @@ When drafting:
 - avoid generic AI tone and LinkedIn theater;
 - avoid repetitive bullet-question patterns;
 - avoid overusing short dramatic sentences;
+- avoid English-calque contrast patterns in Russian, especially "the problem
+  is not A, the problem is B";
+- replace contrast templates with concrete causal explanation;
+- avoid abstract placeholder product examples when a real product situation can
+  make the point;
 - do not polish weak reasoning into confident prose.
+
+Bad pattern:
+
+```text
+Проблема не в том, что проверка слишком строгая.
+Проблема в том, что риск стал видимым слишком поздно.
+```
+
+Better:
+
+```text
+Со стороны кажется, что безопасность просто тормозит релиз. Но к этому моменту
+команда уже выбрала решение, написала код, договорилась о сроках и почти дошла
+до выкатки. Любой найденный риск теперь стоит дорого, потому что он появился в
+разговоре слишком поздно.
+```
 
 ## Knowledge Updates
 
