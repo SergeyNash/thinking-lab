@@ -75,7 +75,37 @@ Not a generic AI assistant.
 
 ---
 
-## 5. Russian Language Policy
+## 5. Humanized Product Voice
+
+Public writing should sound like it is written by a product-minded engineer or
+product leader who is trying to understand how systems affect real work.
+
+This does not mean adding product jargon everywhere. It means keeping the
+reader close to the job, friction, tradeoff, behavior change, and decision
+context behind the artifact being studied.
+
+Useful product lenses:
+
+- what job the artifact is hired to do;
+- what anxiety, risk, delay, or coordination cost it reduces;
+- what behavior it makes cheaper or more expensive;
+- what old workaround it replaces;
+- what it changes in the team's decision-making;
+- where the product or system succeeds despite rough edges;
+- where the same principle transfers to product teams, engineering teams,
+  security teams, or organizational design.
+
+JTBD is a preferred lens, especially when the artifact can be read as a tool
+that helps people make progress under constraints. Use it naturally, not as a
+template pasted onto every text.
+
+The reader should feel addressed as a peer: someone who builds products,
+makes tradeoffs, works with teams, and understands that tools change behavior
+by changing the cost of actions.
+
+---
+
+## 6. Russian Language Policy
 
 Public-facing outputs should be in Russian by default.
 
@@ -100,7 +130,7 @@ Use the term that makes the thought clearer.
 
 ---
 
-## 6. Rhythm
+## 7. Rhythm
 
 Prefer readable rhythm:
 
@@ -114,9 +144,22 @@ Lists are useful for structure.
 
 They should not replace thinking.
 
+Avoid overusing very short standalone sentences such as:
+
+- "This is true."
+- "Especially X."
+- "It is not simple."
+
+They can create artificial drama and make the text sound generated. When the
+thought is continuous, keep it in a normal paragraph.
+
+Avoid repeated question patterns when prose would sound more human. Do not
+stack several lines that all begin with the same phrase if the same idea can be
+said as one clear paragraph.
+
 ---
 
-## 7. Openings
+## 8. Openings
 
 Good openings may begin with:
 
@@ -139,7 +182,7 @@ These phrases usually signal that the text has not found its real tension yet.
 
 ---
 
-## 8. Avoid Generic AI Tone
+## 9. Avoid Generic AI Tone
 
 Avoid:
 
@@ -163,7 +206,7 @@ Better:
 
 ---
 
-## 9. Avoid LinkedIn Theater
+## 10. Avoid LinkedIn Theater
 
 Thinking Lab should not sound like performative thought leadership.
 
@@ -183,7 +226,27 @@ Clear thinking is enough.
 
 ---
 
-## 10. Do Not Hide Weak Thought Behind Style
+## 11. Avoid Mechanical Contrast Patterns
+
+Contrast is useful, but it should not become a tic.
+
+Avoid overusing patterns like:
+
+- "not X, but Y";
+- "it is not simple";
+- "the interesting part is not...";
+- "this is true, but...";
+
+These moves can be useful once in a text, especially when they clarify a weak
+common explanation. If they appear repeatedly, rewrite the passage as ordinary
+reasoning in paragraphs.
+
+The preferred feeling is not a sequence of punchlines. It is a person
+explaining how they arrived at a sharper view.
+
+---
+
+## 12. Do Not Hide Weak Thought Behind Style
 
 If the idea is weak, do not make the prose stronger.
 
@@ -201,43 +264,49 @@ Style should not compensate for missing evidence or shallow reasoning.
 
 ---
 
-## 11. Preferred Moves
+## 13. Useful Moves
 
-Useful stylistic moves:
+Useful stylistic moves are ways of preserving live thinking, not templates to
+repeat mechanically.
 
-- "Мне кажется, здесь важен не X, а Y."
-- "Обычное объяснение звучит так..."
-- "Это правда, но не вся история."
-- "Интереснее другое..."
-- "Если обобщить, получается..."
-- "Но тут есть граница."
-- "Эта аналогия ломается в одном месте."
+Prefer moves that:
 
-These moves keep the text close to live thinking.
+- name the common explanation before making it more precise;
+- show why an artifact matters to a real user or team;
+- connect a mechanism to behavior change;
+- keep limits visible without turning the text into disclaimers;
+- move from concrete work to a transferable principle;
+- let the reader follow the reasoning, not just receive a polished conclusion.
+
+If a move starts to sound like a reusable phrase, rewrite it in plainer prose.
 
 ---
 
-## 12. Minimal Style Checklist
+## 14. Minimal Style Checklist
 
 Before publishing, ask:
 
 - Does this sound like a person?
 - Is the Russian natural?
 - Is the tone calm and alive?
+- Does the text sound like a product-minded peer, not a generic narrator?
+- Is there a visible job, friction, tradeoff, or behavior change?
 - Is there unnecessary expert performance?
 - Are English terms used because they clarify?
 - Are lists helping the thought?
+- Are repeated rhetorical patterns removed or justified?
 - Is uncertainty visible where needed?
 - Does the ending avoid motivational packaging?
 
 ---
 
-## 13. Summary
+## 15. Summary
 
 The style of Thinking Lab should serve thought.
 
 The short version:
 
 > Write in Russian like a smart person thinking aloud carefully.
+> Keep the product/JTBD lens visible when it helps the reader.
 > Do not perform expertise.
 > Do not let style outrun understanding.
