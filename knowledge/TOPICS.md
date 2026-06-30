@@ -34,6 +34,20 @@ Examples of valid topic forms:
 - Why did an organization become slow?
 - Why did a practice keep reappearing?
 
+Topics may be approached through one or more research optics:
+
+- archaeology of engineering decisions;
+- engineering of management;
+- cross-domain analogies;
+- mental models;
+- future of engineering;
+- unfinished investigations;
+- failure analysis;
+- principle extraction.
+
+These are not content categories. They are ways to investigate the same
+underlying question from different angles.
+
 ---
 
 ## 3. What Does Not Belong Here
@@ -58,6 +72,7 @@ Use this lightweight format:
 
 Status:
 Artifact / domain:
+Research optics:
 Why interesting:
 Initial question:
 Possible principle:
@@ -102,6 +117,8 @@ These examples are placeholders for future research, not completed work.
 
 Status: active  
 Artifact / domain: version control, software engineering  
+Research optics: archaeology of engineering decisions, cross-domain analogy,
+mental model, principle extraction
 Why interesting: Git became a durable standard, but obvious explanations such as
 "because GitHub" are incomplete.  
 Initial question: Why did Git fit the real behavior of software development so

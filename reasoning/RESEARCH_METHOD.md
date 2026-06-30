@@ -94,7 +94,45 @@ Output of this stage:
 
 ---
 
-## 4. Stage 3: Define the System Boundary
+## 4. Stage 3: Choose Research Optics
+
+Research optics are ways of investigating a topic.
+
+They are not content categories and not publishing rubrics.
+
+A single topic may use several optics:
+
+- archaeology of engineering decisions;
+- engineering of management;
+- cross-domain analogies;
+- mental models;
+- future of engineering;
+- unfinished investigations;
+- failure analysis;
+- principle extraction.
+
+Ask:
+
+- Are we asking why an idea survived?
+- Are we transferring engineering thinking into management?
+- Are we testing an analogy across domains?
+- Are we building a reusable mental model?
+- Are we exploring a structural future change?
+- Are we documenting thinking in progress?
+- Are we learning from a failure?
+- What principle are we trying to extract?
+
+The optics may change during research.
+
+Output of this stage:
+
+- selected research optics;
+- reason each optic is useful;
+- optics explicitly excluded for now.
+
+---
+
+## 5. Stage 4: Define the System Boundary
 
 Before explaining a system, define what is being studied.
 
@@ -126,7 +164,7 @@ Output of this stage:
 
 ---
 
-## 5. Stage 4: Reconstruct Context
+## 6. Stage 5: Reconstruct Context
 
 Context prevents hindsight.
 
@@ -152,7 +190,7 @@ Output of this stage:
 
 ---
 
-## 6. Stage 5: Generate Competing Hypotheses
+## 7. Stage 6: Generate Competing Hypotheses
 
 Do not start with one favored explanation.
 
@@ -179,7 +217,7 @@ Output of this stage:
 
 ---
 
-## 7. Stage 6: Examine Cost Structures
+## 8. Stage 7: Examine Cost Structures
 
 Many systems become understandable when we ask what they make cheap or
 expensive.
@@ -209,7 +247,7 @@ Output of this stage:
 
 ---
 
-## 8. Stage 7: Collect and Classify Evidence
+## 9. Stage 8: Collect and Classify Evidence
 
 Evidence should be classified by strength and role.
 
@@ -241,7 +279,7 @@ Output of this stage:
 
 ---
 
-## 9. Stage 8: Attack the Explanation
+## 10. Stage 9: Attack the Explanation
 
 Every important explanation should be attacked.
 
@@ -266,7 +304,7 @@ Output of this stage:
 
 ---
 
-## 10. Stage 9: Extract the Principle
+## 11. Stage 10: Extract the Principle
 
 The principle is the compressed insight that may travel beyond the original
 artifact.
@@ -297,7 +335,7 @@ Output of this stage:
 
 ---
 
-## 11. Stage 10: Test Transfer
+## 12. Stage 11: Test Transfer
 
 A principle becomes more valuable when it transfers across domains.
 
@@ -322,7 +360,7 @@ Output of this stage:
 
 ---
 
-## 12. Stage 11: Decide the Output
+## 13. Stage 12: Decide the Output
 
 Not every research should become a public artifact.
 
@@ -359,7 +397,7 @@ Output of this stage:
 
 ---
 
-## 13. Stage 12: Archive Learning
+## 14. Stage 13: Archive Learning
 
 Research should improve the system even when it does not produce publication.
 
@@ -389,7 +427,7 @@ Output of this stage:
 
 ---
 
-## 14. Minimal Research Template
+## 15. Minimal Research Template
 
 Use this when starting an investigation:
 
@@ -400,25 +438,27 @@ Use this when starting an investigation:
 
 ## 2. Why This Is Interesting
 
-## 3. System Boundary
+## 3. Research Optics
 
-## 4. Context
+## 4. System Boundary
 
-## 5. Competing Hypotheses
+## 5. Context
 
-## 6. Cost Structure
+## 6. Competing Hypotheses
 
-## 7. Evidence
+## 7. Cost Structure
 
-## 8. Counterexamples and Objections
+## 8. Evidence
 
-## 9. Candidate Principle
+## 9. Counterexamples and Objections
 
-## 10. Transfer
+## 10. Candidate Principle
 
-## 11. Output Decision
+## 11. Transfer
 
-## 12. Open Questions
+## 12. Output Decision
+
+## 13. Open Questions
 ```
 
 The template is a starting point.
@@ -427,12 +467,13 @@ It may be shortened for small investigations or expanded for larger ones.
 
 ---
 
-## 15. Method Quality Checks
+## 16. Method Quality Checks
 
 Before treating research as mature, ask:
 
 - Did we start from a concrete artifact?
 - Is the research question explanatory?
+- Did we choose the research optics explicitly?
 - Is the system boundary explicit?
 - Did we reconstruct context?
 - Did we consider alternatives?
@@ -450,7 +491,7 @@ If several answers are no, the research is probably still early.
 
 ---
 
-## 16. Summary
+## 17. Summary
 
 The Thinking Lab research method moves from artifact to principle.
 

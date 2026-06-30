@@ -80,6 +80,37 @@ The stable subject is:
 
 > ideas that survive technologies.
 
+### Research Optics, Not Content Categories
+
+Thinking Lab has one primary subject:
+
+> ideas behind successful technologies, organizations, and complex systems.
+
+Different investigations may use different optics, but those optics are not
+separate content categories or channel rubrics. They are ways to examine the
+same underlying subject.
+
+Current research optics include:
+
+- **Archaeology of engineering decisions**: why a technical idea survived
+  alternatives.
+- **Engineering of management**: how engineering thinking transfers to
+  organizations, processes, incentives, and product work.
+- **Cross-domain analogies**: where the same structure appears in different
+  systems.
+- **Mental models**: reusable ways of thinking rather than direct advice.
+- **Future of engineering**: structural changes in engineering work, especially
+  under AI.
+- **Unfinished investigations**: honest records of thinking in progress.
+- **Failure analysis**: what failed ideas, products, architectures, or processes
+  reveal.
+- **Principle extraction**: the final move of most research, not a standalone
+  category.
+
+One topic may use several optics at once. For example, Git can be studied as an
+engineering artifact, an analogy for organizational culture, a mental model
+about experimentation cost, and a source of product principles.
+
 ---
 
 ## 3. Level 1: Context
