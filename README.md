@@ -1,278 +1,545 @@
 # Thinking Lab
 
-> Behind every great technology is a simple idea.
-> Our job is to find it.
+> Исследовательская система для поиска простых идей за сложными технологиями,
+> продуктами, организациями и процессами.
 
-Thinking Lab is a personal research system for studying technologies,
-organizations, products, AI, security, and other complex systems.
+Thinking Lab — это не Telegram-канал, не LinkedIn-блог и не фабрика контента.
 
-It does not explain only how things work.
+Это личная исследовательская система: способ регулярно превращать наблюдения
+о технологиях, продуктах, командах, AI, безопасности и других сложных системах
+в понятные объяснения, принципы и, если есть смысл, публичные тексты.
 
-It investigates why they work, why they survive, what constraints shaped them,
-and what ideas can be transferred elsewhere.
-
----
-
-## What This Is
-
-Thinking Lab is not a Telegram channel, a LinkedIn blog, or a content factory.
-
-It is a reasoning system.
-
-The system starts with concrete artifacts:
-
-- technologies;
-- protocols;
-- tools;
-- products;
-- organizations;
-- processes;
-- standards;
-- failures;
-- habits;
-- recurring patterns.
-
-Examples may include Git, SQL, TCP, Excel, roadmaps, KPIs, feature flags,
-security incidents, or AI agents.
-
-But the real subject is not the artifact itself.
-
-The real subject is the idea behind it.
-
-For example:
-
-Git is not only a version control system.
-It is also a system that lowers the cost of experimentation.
-
-That principle can then be tested in engineering, product management,
-organizations, security, and other domains.
+Публикации здесь являются результатом работы системы.
+Цель системы — понимание.
 
 ---
 
-## Why It Exists
+## Что это
 
-The project exists to make deep thinking reproducible.
+Thinking Lab начинается не с идеи “надо что-то запостить”, а с конкретного
+артефакта или вопроса.
 
-It was born from a simple practical question:
+Артефактом может быть технология, продукт, протокол, организация, процесс,
+ошибка, привычка, стандарт, управленческий паттерн или странный успех, который
+почему-то пережил альтернативы.
 
-> Should this become a Telegram channel or LinkedIn content project?
+Примеры:
 
-The answer became larger:
+- Git;
+- SQL;
+- TCP;
+- Linux;
+- Docker;
+- Kubernetes;
+- Excel;
+- feature flags;
+- roadmaps;
+- security incidents;
+- AI agents;
+- командные ритуалы;
+- продуктовые метрики.
 
-> We are not designing content.
-> We are designing the conditions under which good thinking can happen
-> repeatedly.
+Но настоящий предмет исследования — не сам артефакт.
 
-Publications are outputs.
-Understanding is the goal.
+Настоящий предмет — идея за ним: какая работа выполняется, какое трение
+снижается, какое поведение становится дешевле, какие ограничения сформировали
+решение и какой принцип можно перенести в другой домен.
 
----
-
-## What It Studies
-
-Thinking Lab studies:
-
-- engineering systems;
-- organizations;
-- product and management systems;
-- cybersecurity;
-- AI and agentic systems;
-- economics;
-- science;
-- sports;
-- recurring patterns in complex systems.
-
-These domains are lenses.
-
-The stable subject is:
-
-> ideas that survive technologies.
+Например, Git можно изучать не только как систему контроля версий. Его можно
+рассматривать как продукт, который снизил цену безопасного эксперимента для
+разработчиков и команд.
 
 ---
 
-## What It Avoids
+## Зачем это нужно
 
-Thinking Lab should not become:
+Проект появился из простого практического вопроса:
 
-- a generic product-management channel;
-- a cybersecurity-only channel;
-- a LinkedIn content machine;
-- a news digest;
-- an AI prompt collection;
-- a multi-agent toy project;
-- a productivity blog;
-- a set of disconnected essays;
-- a personal brand performance.
+> Делать Telegram-канал, LinkedIn-канал или что-то ещё?
 
-Publishing often is not the goal.
-Publishing without understanding is a failure mode.
+Но довольно быстро стало понятно, что начинать с платформы неправильно.
+
+Платформа отвечает на вопрос “где публиковать”.
+Thinking Lab отвечает на другой вопрос:
+
+> Как создать условия, в которых хорошее мышление может повторяться?
+
+Если сразу строить канал, система начинает оптимизироваться под частоту,
+формат, реакцию аудитории и привычные контентные паттерны. Это легко превращает
+даже неплохие идеи в поверхностные посты.
+
+Thinking Lab устроен наоборот: сначала исследование, потом понимание, потом
+решение, нужен ли вообще публичный output.
 
 ---
 
-## How It Works
+## Главная идея
 
-The system follows a simple movement:
+Thinking Lab ищет идеи, которые переживают конкретные технологии.
+
+Базовое движение системы:
 
 ```text
-artifact -> question -> context -> explanation -> critique -> principle -> transfer
+artifact -> question -> context -> explanation -> critique -> principle -> transfer -> output
 ```
 
-It asks:
+Система задаёт вопросы:
 
-- Why does this exist?
-- What problem did it solve?
-- What constraints shaped it?
-- What alternatives failed?
-- What behavior did it make cheap or expensive?
-- What explanation is too easy?
-- What principle survives outside this example?
+- почему это вообще появилось;
+- какую работу это выполняет для человека или команды;
+- какие ограничения сформировали решение;
+- какие альтернативы были рядом;
+- почему простое объяснение недостаточно;
+- что это сделало дешевле или дороже;
+- какой принцип можно перенести в продукт, организацию, безопасность или AI;
+- где этот перенос ломается.
 
-Not every investigation becomes a publication.
+Важно: не каждое исследование должно стать публикацией.
 
-A good question, rejected hypothesis, or useful counterexample can also be a
-valid output.
-
----
-
-## Architecture
-
-Thinking Lab is described through four architectural levels:
-
-1. **Context**: what the system is, who interacts with it, and what it produces.
-2. **Containers**: major subsystems such as Identity, Reasoning, Knowledge,
-   Reasoning Modules, and Communication.
-3. **Components**: internal responsibilities of each subsystem.
-4. **Implementation**: Markdown documents, prompts, models, automation,
-   repository structure, and tools.
-
-The architecture is documented in:
-
-- [`ARCHITECTURE.md`](ARCHITECTURE.md)
-
-The system evolves according to:
-
-- [`DESIGN_PRINCIPLES.md`](DESIGN_PRINCIPLES.md)
+Хороший вопрос, отвергнутая гипотеза, сильный контраргумент или найденный
+framework тоже являются ценным результатом.
 
 ---
 
-## Core Containers
+## Архитектура
 
-Thinking Lab currently has five major containers:
+Thinking Lab состоит из нескольких слоёв. Верхние слои стабильнее и задают
+ограничения. Нижние слои гибче и чаще меняются от практики.
+
+```mermaid
+flowchart TD
+    A["Foundation<br/>README, Architecture, Design Principles"]
+    B["Identity<br/>purpose, philosophy, boundaries"]
+    C["Reasoning<br/>epistemology, systems, method, evidence"]
+    D["Knowledge<br/>topics, notes, frameworks, analogies, failures, outputs"]
+    E["Modules<br/>cognitive functions and handoffs"]
+    F["Communication<br/>writing, style, formats, Russian public voice"]
+    G["Artifacts<br/>notes, posts, essays, talks, diagrams"]
+
+    A --> B --> C --> D --> E --> F --> G
+```
+
+Подробная архитектура описана в [ARCHITECTURE.md](ARCHITECTURE.md).
+Правила развития системы описаны в [DESIGN_PRINCIPLES.md](DESIGN_PRINCIPLES.md).
+
+---
+
+## Как работают слои
+
+### Foundation
+
+Foundation — это вход и каркас проекта.
+
+Сюда входят:
+
+- [README.md](README.md) — русская входная точка в проект;
+- [ARCHITECTURE.md](ARCHITECTURE.md) — архитектура системы;
+- [DESIGN_PRINCIPLES.md](DESIGN_PRINCIPLES.md) — принципы проектирования.
+
+Этот слой отвечает на вопрос: что мы вообще строим и как система должна
+развиваться, чтобы не расползтись в набор случайных заметок.
+
+### Identity
+
+Identity задаёт смысл проекта и его границы.
+
+Главный документ:
+
+- [identity/PHILOSOPHY.md](identity/PHILOSOPHY.md)
+
+Этот слой защищает Thinking Lab от дрейфа. Он фиксирует, что проект не является
+продуктовым блогом, cybersecurity-каналом, LinkedIn-машиной или коллекцией
+AI-промптов. Домены могут меняться, но центральная задача остаётся прежней:
+искать переносимые идеи за сложными системами.
+
+### Reasoning
+
+Reasoning определяет, как Thinking Lab думает.
+
+Документы:
+
+- [reasoning/EPISTEMOLOGY.md](reasoning/EPISTEMOLOGY.md)
+- [reasoning/SYSTEMS.md](reasoning/SYSTEMS.md)
+- [reasoning/RESEARCH_METHOD.md](reasoning/RESEARCH_METHOD.md)
+- [reasoning/EVIDENCE.md](reasoning/EVIDENCE.md)
+
+Этот слой отвечает за качество мышления: что считать знанием, как работать с
+неопределённостью, как проверять объяснения, как отличать сильную аналогию от
+красивой, но слабой истории.
+
+Если коротко: Reasoning не даёт системе писать уверенно о том, что она ещё не
+поняла.
+
+### Knowledge
+
+Knowledge — это память Thinking Lab.
+
+Документы:
+
+- [knowledge/KNOWLEDGE_BASE.md](knowledge/KNOWLEDGE_BASE.md)
+- [knowledge/TOPICS.md](knowledge/TOPICS.md)
+- [knowledge/RESEARCH_NOTES.md](knowledge/RESEARCH_NOTES.md)
+- [knowledge/FRAMEWORKS.md](knowledge/FRAMEWORKS.md)
+- [knowledge/ANALOGIES.md](knowledge/ANALOGIES.md)
+- [knowledge/FAILURES.md](knowledge/FAILURES.md)
+- [knowledge/OUTPUTS.md](knowledge/OUTPUTS.md)
+
+Этот слой хранит не “контент”, а исследовательскую память: темы, рабочие
+заметки, frameworks, аналогии, слабые объяснения, failed hypotheses и будущие
+outputs.
+
+Его задача — сделать так, чтобы каждое новое исследование не начиналось с нуля.
+
+### Modules
+
+Modules — это рабочие когнитивные функции.
+
+Документы:
+
+- [modules/MODULES.md](modules/MODULES.md)
+- [modules/archaeologist.md](modules/archaeologist.md)
+- [modules/historian.md](modules/historian.md)
+- [modules/opponent.md](modules/opponent.md)
+- [modules/transfer.md](modules/transfer.md)
+- [modules/synthesizer.md](modules/synthesizer.md)
+- [modules/editor.md](modules/editor.md)
+
+Модули — не персонажи и не AI-агенты. Это responsibilities, которые может
+выполнять человек, AI-модель, чеклист или будущий инструмент.
+
+Базовый pipeline:
 
 ```text
-Thinking Lab
-|
-+-- Identity System
-+-- Reasoning System
-+-- Knowledge System
-+-- Reasoning Modules
-+-- Communication System
+Archaeologist -> Historian -> Opponent -> Transfer -> Synthesizer -> Editor
 ```
 
-### Identity System
+Если гипотеза слабая, pipeline может возвращаться назад: к источникам,
+контексту, критике или формулировке вопроса.
 
-Defines purpose, North Star, beliefs, boundaries, and non-goals.
+### Communication
 
-### Reasoning System
+Communication отвечает за превращение понимания в человеческий текст.
 
-Defines epistemology, research method, evidence rules, systems thinking, and
-quality criteria for explanations.
+Документы:
 
-### Knowledge System
+- [communication/WRITING.md](communication/WRITING.md)
+- [communication/STYLE.md](communication/STYLE.md)
+- [communication/FORMATS.md](communication/FORMATS.md)
 
-Stores research notes, examples, frameworks, analogies, failures, rejected
-hypotheses, and prior outputs.
+Этот слой не должен заставлять систему публиковать больше. Он нужен для того,
+чтобы не потерять мысль при переводе исследования в Telegram, LinkedIn, essay,
+talk или внутреннюю заметку.
 
-### Reasoning Modules
+Публичные outputs по умолчанию пишутся на русском.
 
-Perform isolated cognitive functions such as archaeology, history, critique,
-transfer, synthesis, and editing.
-
-Modules are not personalities.
-They are reasoning responsibilities.
-
-### Communication System
-
-Turns understanding into essays, posts, talks, diagrams, notes, and other
-public or private artifacts.
-
-Russian is the default language for public-facing outputs unless a specific
-artifact requires another language.
+Голос по умолчанию: умный разговорный русский, без академического тумана,
+LinkedIn-пафоса и generic AI-ритма. После первого практического прогона в
+[communication/STYLE.md](communication/STYLE.md) зафиксирован humanized product
+voice: писать как продуктовый инженер или руководитель продукта, держать в
+фокусе JTBD, работу пользователя, трение, цену действия и изменение поведения
+команды.
 
 ---
 
-## Design Principles
+## Поток знаний
 
-The most important design principles are:
+В Thinking Lab знания текут вниз.
 
-- Knowledge flows downward.
-- Feedback flows upward.
-- Stability above, flexibility below.
-- Research before writing.
-- One module equals one cognitive responsibility.
-- Prompts are implementation details.
-- AI augments reasoning, but does not replace judgment.
-- The system optimizes for understanding, not output.
+Верхние слои задают ограничения для нижних. Например, философия ограничивает
+метод исследования, evidence rules ограничивают выводы, а style guide
+ограничивает то, как исследование превращается в текст.
 
----
+```mermaid
+flowchart TD
+    Identity["Identity<br/>что важно и что нельзя потерять"]
+    Reasoning["Reasoning<br/>как думать и проверять"]
+    Knowledge["Knowledge<br/>что уже известно и сохранено"]
+    Modules["Modules<br/>как прогонять исследование"]
+    Communication["Communication<br/>как говорить человеческим языком"]
+    Artifacts["Artifacts<br/>notes, posts, essays, talks"]
 
-## Current Status
+    Identity --> Reasoning --> Knowledge --> Modules --> Communication --> Artifacts
+```
 
-This project is in its initial system design phase.
-
-Accepted baseline documents:
-
-- [`ARCHITECTURE.md`](ARCHITECTURE.md)
-- [`DESIGN_PRINCIPLES.md`](DESIGN_PRINCIPLES.md)
-- [`identity/PHILOSOPHY.md`](identity/PHILOSOPHY.md)
-
-Accepted reasoning documents:
-
-- [`reasoning/EPISTEMOLOGY.md`](reasoning/EPISTEMOLOGY.md)
-- [`reasoning/SYSTEMS.md`](reasoning/SYSTEMS.md)
-- [`reasoning/RESEARCH_METHOD.md`](reasoning/RESEARCH_METHOD.md)
-- [`reasoning/EVIDENCE.md`](reasoning/EVIDENCE.md)
-
-Accepted knowledge documents:
-
-- [`knowledge/KNOWLEDGE_BASE.md`](knowledge/KNOWLEDGE_BASE.md)
-- [`knowledge/TOPICS.md`](knowledge/TOPICS.md)
-- [`knowledge/RESEARCH_NOTES.md`](knowledge/RESEARCH_NOTES.md)
-- [`knowledge/FRAMEWORKS.md`](knowledge/FRAMEWORKS.md)
-- [`knowledge/ANALOGIES.md`](knowledge/ANALOGIES.md)
-- [`knowledge/FAILURES.md`](knowledge/FAILURES.md)
-- [`knowledge/OUTPUTS.md`](knowledge/OUTPUTS.md)
-
-Accepted communication documents:
-
-- [`communication/WRITING.md`](communication/WRITING.md)
-- [`communication/STYLE.md`](communication/STYLE.md)
-- [`communication/FORMATS.md`](communication/FORMATS.md)
-
-Accepted module documents:
-
-- [`modules/MODULES.md`](modules/MODULES.md)
-- [`modules/archaeologist.md`](modules/archaeologist.md)
-- [`modules/historian.md`](modules/historian.md)
-- [`modules/opponent.md`](modules/opponent.md)
-- [`modules/transfer.md`](modules/transfer.md)
-- [`modules/synthesizer.md`](modules/synthesizer.md)
-- [`modules/editor.md`](modules/editor.md)
-
-Source context from the original design discussion is stored in:
-
-- [`context/Thinking_Lab_Discussion_Summary.md`](context/Thinking_Lab_Discussion_Summary.md)
-- [`context/Thinking_Lab_Design_Log.md`](context/Thinking_Lab_Design_Log.md)
-
-The next expected step is a practical end-to-end test of the system on one
-research topic.
+Нижние слои не должны тихо переопределять верхние. Если одно и то же правило
+начинает повторяться в разных местах, скорее всего, оно должно подняться выше.
 
 ---
 
-## Working Rule
+## Поток обратной связи
 
-Before adding new content, ask:
+Обратная связь течёт вверх.
 
-> Does this improve understanding?
+Плохой draft может показать проблему в стиле. Слабая публикация может показать
+дырку в reasoning. Повторяющаяся failed hypothesis может изменить research
+method. Редко, но возможно, практический опыт может изменить даже philosophy.
 
-If the answer is no, it probably does not belong in Thinking Lab yet.
+```mermaid
+flowchart BT
+    Artifacts["Artifacts<br/>outputs and drafts"]
+    Communication["Communication<br/>format and voice feedback"]
+    Modules["Modules<br/>handoff and procedure feedback"]
+    Knowledge["Knowledge<br/>new notes, failures, frameworks"]
+    Reasoning["Reasoning<br/>method and evidence updates"]
+    Identity["Identity<br/>rare strategic changes"]
+
+    Artifacts --> Communication --> Modules --> Knowledge --> Reasoning --> Identity
+```
+
+Чем выше слой, тем осторожнее он должен меняться.
+
+---
+
+## Как проходит исследование
+
+Стандартный ручной pipeline выглядит так:
+
+```mermaid
+flowchart LR
+    T["Topic<br/>artifact or question"]
+    A["Archaeologist<br/>find tension"]
+    H["Historian<br/>restore context"]
+    O["Opponent<br/>attack weak explanations"]
+    TR["Transfer<br/>test cross-domain principle"]
+    S["Synthesizer<br/>build working model"]
+    E["Editor<br/>choose output form"]
+    K["Knowledge<br/>save artifacts"]
+
+    T --> A --> H --> O --> TR --> S --> E --> K
+    O -. "weak hypothesis" .-> H
+    TR -. "transfer fails" .-> S
+    S -. "not enough evidence" .-> H
+```
+
+Модули не обязаны выполняться автоматически. Сейчас v0.1 устроен как ручная
+оркестрация: человек или AI проходит по шагам, фиксирует результаты и решает,
+что делать дальше.
+
+---
+
+## Ручная оркестрация
+
+Чтобы запустить исследование вручную:
+
+1. Выбрать тему или артефакт.
+2. Добавить тему в [knowledge/TOPICS.md](knowledge/TOPICS.md).
+3. Сформулировать вопрос и tension через `Archaeologist`.
+4. Восстановить исторический и системный контекст через `Historian`.
+5. Атаковать слабые объяснения через `Opponent`.
+6. Проверить перенос принципа через `Transfer`.
+7. Собрать рабочую модель через `Synthesizer`.
+8. Принять output decision через `Editor`.
+9. Сохранить ход исследования в [knowledge/RESEARCH_NOTES.md](knowledge/RESEARCH_NOTES.md).
+10. Разнести найденные frameworks, analogies, failures и outputs по knowledge-файлам.
+11. Только после этого писать draft, если он действительно нужен.
+
+Главная роль ручного оркестратора — не “получить текст”, а не дать системе
+перепрыгнуть через понимание.
+
+---
+
+## Связь Knowledge, Modules и Communication
+
+Knowledge хранит память, Modules выполняют исследовательские функции,
+Communication превращает результат в человеческий output.
+
+```mermaid
+flowchart TD
+    Topics["TOPICS.md<br/>что исследовать"]
+    Notes["RESEARCH_NOTES.md<br/>ход исследования"]
+    Frameworks["FRAMEWORKS.md<br/>переиспользуемые модели"]
+    Analogies["ANALOGIES.md<br/>переносы как гипотезы"]
+    Failures["FAILURES.md<br/>что отвергли и почему"]
+    Outputs["OUTPUTS.md<br/>что может стать артефактом"]
+
+    Modules["Reasoning Modules<br/>Archaeologist, Historian, Opponent,<br/>Transfer, Synthesizer, Editor"]
+    Writing["WRITING.md<br/>research -> text"]
+    Style["STYLE.md<br/>voice, rhythm, humanized product voice"]
+    Formats["FORMATS.md<br/>Telegram, LinkedIn, essay, talk"]
+    Artifact["Public or private artifact"]
+
+    Topics --> Modules
+    Modules --> Notes
+    Modules --> Frameworks
+    Modules --> Analogies
+    Modules --> Failures
+    Notes --> Outputs
+    Outputs --> Writing
+    Writing --> Style
+    Style --> Formats
+    Formats --> Artifact
+```
+
+Это важно: draft не должен появляться из воздуха. Он должен быть связан с
+исследованием, заметками и output decision.
+
+---
+
+## Где что лежит
+
+```text
+README.md
+ARCHITECTURE.md
+DESIGN_PRINCIPLES.md
+
+identity/
+  PHILOSOPHY.md
+
+reasoning/
+  EPISTEMOLOGY.md
+  SYSTEMS.md
+  RESEARCH_METHOD.md
+  EVIDENCE.md
+
+knowledge/
+  KNOWLEDGE_BASE.md
+  TOPICS.md
+  RESEARCH_NOTES.md
+  FRAMEWORKS.md
+  ANALOGIES.md
+  FAILURES.md
+  OUTPUTS.md
+
+communication/
+  WRITING.md
+  STYLE.md
+  FORMATS.md
+
+modules/
+  MODULES.md
+  archaeologist.md
+  historian.md
+  opponent.md
+  transfer.md
+  synthesizer.md
+  editor.md
+
+context/
+  Thinking_Lab_Discussion_Summary.md
+  Thinking_Lab_Design_Log.md
+```
+
+`context/` хранит исходный контекст проектирования: краткое резюме и design log
+с историей решений, разворотов и отвергнутых альтернатив.
+
+---
+
+## Как из исследования появляется текст
+
+Текст появляется только после output decision.
+
+Сначала система должна понять:
+
+- какой вопрос она исследует;
+- какое объяснение предлагает;
+- какие слабые объяснения отвергла;
+- какой механизм считает главным;
+- где границы уверенности;
+- какой принцип можно перенести;
+- какой формат лучше всего сохранит мысль.
+
+После этого Communication layer помогает выбрать форму:
+
+- Telegram — короткая исследовательская заметка с одной сильной мыслью;
+- LinkedIn — профессиональный пост без thought-leadership театра;
+- Essay — более длинное исследование с контекстом, evidence и limits;
+- Talk/note — рабочий формат для обсуждения или будущего выступления.
+
+Русский язык — default для публичных outputs.
+
+Стиль должен звучать как живой человек, который понимает продуктовую,
+инженерную и организационную реальность. Важна не “красивость” текста, а
+ощущение, что автор думает вместе с читателем и не прячет слабую мысль за
+полировкой.
+
+---
+
+## Пример: почему Git победил
+
+Первый smoke test системы был проведён на теме:
+
+> Почему Git победил?
+
+Рабочая модель получилась такой:
+
+Git победил не только потому, что был быстрым, распределённым, написан Линусом
+или усилен GitHub. Эти факторы важны, но они не объясняют всю историю.
+
+Более интересная гипотеза: Git хорошо попал в реальную работу разработчика и
+команды. Он снизил цену безопасного эксперимента: стало проще пробовать,
+ветвиться, сохранять промежуточные состояния, ошибаться, возвращаться назад и
+работать параллельно.
+
+Продуктовый перенос:
+
+> Поведение команды меняется через стоимость действий.
+
+Если учиться дорого, команда спорит, защищается и откладывает решения. Если
+учиться относительно безопасно, появляется больше движения и меньше страха
+перед ошибкой.
+
+Результаты этого прогона сохранены в knowledge layer:
+
+- тема в [knowledge/TOPICS.md](knowledge/TOPICS.md);
+- research note в [knowledge/RESEARCH_NOTES.md](knowledge/RESEARCH_NOTES.md);
+- framework `Cost of Reversible Experimentation` в [knowledge/FRAMEWORKS.md](knowledge/FRAMEWORKS.md);
+- аналогии в [knowledge/ANALOGIES.md](knowledge/ANALOGIES.md);
+- слабое объяснение “because GitHub” в [knowledge/FAILURES.md](knowledge/FAILURES.md);
+- output candidates в [knowledge/OUTPUTS.md](knowledge/OUTPUTS.md).
+
+---
+
+## Текущий статус
+
+Репозиторий инициализирован и опубликован на GitHub:
+
+- [github.com/SergeyNash/thinking-lab](https://github.com/SergeyNash/thinking-lab)
+
+Созданы базовые слои v0.1:
+
+- foundation;
+- identity;
+- reasoning;
+- knowledge;
+- modules;
+- communication.
+
+Первый ручной smoke test на теме “Почему Git победил?” успешно проведён.
+
+Humanized product voice и JTBD-оптика зафиксированы в
+[communication/STYLE.md](communication/STYLE.md).
+
+Проект сейчас находится в фазе раннего практического использования: архитектура
+уже есть, но она должна проверяться на реальных исследованиях, а не только на
+документах.
+
+---
+
+## Как продолжать работу
+
+Хороший следующий шаг — брать реальные темы и прогонять их через систему.
+
+Подходящий формат работы:
+
+1. Выбрать одну тему.
+2. Провести ручной module pipeline.
+3. Зафиксировать результаты в knowledge layer.
+4. Решить, нужен ли output.
+5. Если нужен, выбрать формат в communication layer.
+6. Написать draft.
+7. После проверки обновить стиль, modules или knowledge, если процесс показал
+   слабое место системы.
+
+Автоматизацию стоит добавлять позже, когда ручной процесс станет достаточно
+понятным. Сейчас важнее не ускорять систему, а убедиться, что она правильно
+думает.
+
+---
+
+## Главное правило
+
+Перед добавлением нового текста, слоя, модуля или output нужно спросить:
+
+> Это улучшает понимание?
+
+Если нет, скорее всего, это пока не нужно Thinking Lab.
