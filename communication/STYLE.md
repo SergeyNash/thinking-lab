@@ -10,6 +10,8 @@ investigative, and human.
 Detailed Russian anti-patterns live in
 `communication/RUSSIAN_ANTI_PATTERNS.md`.
 
+Adapted humanizer rules live in `communication/HUMANIZER_RULES.md`.
+
 ---
 
 ## 1. Purpose
@@ -24,7 +26,8 @@ It helps public writing avoid:
 - motivational performance;
 - empty structure;
 - overconfident expertise;
-- English-calque Russian syntax.
+- English-calque Russian syntax;
+- bureaucratic or promotional Russian.
 
 The style should make thinking easier to follow, not make weak ideas look
 stronger.
@@ -42,10 +45,13 @@ This document owns:
 - forbidden patterns;
 - use of English terms;
 - sentence and paragraph feel;
-- stylistic quality checks.
+- stylistic quality checks;
+- integration order for anti-pattern and humanizer passes.
 
-Detailed rewrite rules for Russian anti-patterns belong in
+Detailed rewrite rules for high-priority Russian anti-patterns belong in
 `RUSSIAN_ANTI_PATTERNS.md`.
+
+Broader adapted humanizer rules belong in `HUMANIZER_RULES.md`.
 
 ---
 
@@ -62,7 +68,23 @@ Do not use this document for:
 
 ---
 
-## 4. Default Voice
+## 4. Style Priority
+
+Apply writing rules in this order:
+
+1. preserve meaning, evidence, uncertainty, and limits;
+2. preserve Thinking Lab product/JTBD voice;
+3. apply `RUSSIAN_ANTI_PATTERNS.md`;
+4. apply `HUMANIZER_RULES.md`;
+5. adapt to the selected platform format.
+
+Style must never outrun understanding.
+
+If the idea is weak, return to reasoning instead of polishing the text.
+
+---
+
+## 5. Default Voice
 
 The default voice:
 
@@ -82,7 +104,7 @@ Not a generic AI assistant.
 
 ---
 
-## 5. Humanized Product Voice
+## 6. Humanized Product Voice
 
 Public writing should sound like it is written by a product-minded engineer or
 product leader who is trying to understand how systems affect real work.
@@ -112,7 +134,7 @@ by changing the cost of actions.
 
 ---
 
-## 6. Russian Language Policy
+## 7. Russian Language Policy
 
 Public-facing outputs should be in Russian by default.
 
@@ -136,11 +158,12 @@ Do not use English to sound more sophisticated.
 Use the term that makes the thought clearer.
 
 When writing in Russian, do not copy English explanatory syntax. Check
-`RUSSIAN_ANTI_PATTERNS.md` before finalizing a public draft.
+`RUSSIAN_ANTI_PATTERNS.md` and `HUMANIZER_RULES.md` before finalizing a public
+draft.
 
 ---
 
-## 7. Rhythm
+## 8. Rhythm
 
 Prefer readable rhythm:
 
@@ -157,7 +180,7 @@ They should not replace thinking.
 Avoid overusing very short standalone sentences such as:
 
 - "Это правда.";
-- "Особенно X.";
+- "Особенно GitHub.";
 - "Он не простой.";
 
 They can create artificial drama and make the text sound generated. When the
@@ -179,7 +202,7 @@ Detailed examples and rewrite rules live in `RUSSIAN_ANTI_PATTERNS.md`.
 
 ---
 
-## 8. Openings
+## 9. Openings
 
 Good openings may begin with:
 
@@ -204,7 +227,7 @@ These phrases usually signal that the text has not found its real tension yet.
 
 ---
 
-## 9. Avoid Generic AI Tone
+## 10. Avoid Generic AI Tone
 
 Avoid:
 
@@ -220,19 +243,24 @@ Avoid:
 
 Bad signal:
 
-> Это важный урок для всех команд, которые хотят быть эффективнее.
+```text
+Это важный урок для всех команд, которые хотят быть эффективнее.
+```
 
 Better:
 
-> Если система снижает цену ошибки, люди начинают пробовать чаще. Иногда это
-> важнее, чем сама функция.
+```text
+Если система снижает цену ошибки, люди начинают пробовать чаще. Иногда это
+важнее, чем сама функция.
+```
 
 Before finalizing Russian drafts, run the anti-pattern pass from
-`RUSSIAN_ANTI_PATTERNS.md`.
+`RUSSIAN_ANTI_PATTERNS.md`, then the broader humanizer pass from
+`HUMANIZER_RULES.md`.
 
 ---
 
-## 10. Avoid LinkedIn Theater
+## 11. Avoid LinkedIn Theater
 
 Thinking Lab should not sound like performative thought leadership.
 
@@ -252,7 +280,7 @@ Clear thinking is enough.
 
 ---
 
-## 11. Avoid Mechanical Contrast Patterns
+## 12. Avoid Mechanical Contrast Patterns
 
 Contrast is useful, but it should not become a tic.
 
@@ -294,11 +322,12 @@ The same rule applies to product examples. Do not use abstract placeholder
 examples such as "добавили настройку", "улучшили экран", or "ускорили
 сценарий" when a concrete product situation would be more human.
 
-See `RUSSIAN_ANTI_PATTERNS.md` for the full list.
+See `RUSSIAN_ANTI_PATTERNS.md` for the highest-priority rules and
+`HUMANIZER_RULES.md` for the broader adapted humanizer pass.
 
 ---
 
-## 12. Do Not Hide Weak Thought Behind Style
+## 13. Do Not Hide Weak Thought Behind Style
 
 If the idea is weak, do not make the prose stronger.
 
@@ -316,7 +345,7 @@ Style should not compensate for missing evidence or shallow reasoning.
 
 ---
 
-## 13. Useful Moves
+## 14. Useful Moves
 
 Useful stylistic moves are ways of preserving live thinking, not templates to
 repeat mechanically.
@@ -334,7 +363,56 @@ If a move starts to sound like a reusable phrase, rewrite it in plainer prose.
 
 ---
 
-## 14. Minimal Style Checklist
+## 15. Humanizer Pass
+
+The humanizer pass removes markers that make Russian text sound generated or
+generic.
+
+Use `HUMANIZER_RULES.md` to check:
+
+- era cliches;
+- inflated importance;
+- promotional product language;
+- false universality;
+- bureaucratic nouns;
+- "является", "данный", passive voice;
+- AI signposting;
+- rule-of-three slogans;
+- filler words;
+- typographic habits;
+- assistant-style closings.
+
+Do not intentionally add mistakes.
+
+Do not break punctuation to sound human.
+
+Make the text more specific, more causal, and closer to the author's product
+voice.
+
+---
+
+## 16. Future Voice Passport
+
+Thinking Lab may later support a local author voice passport, but it is not
+part of v0.1.
+
+Future fields may include:
+
+- default form of address;
+- default formality level;
+- preferred rhythm;
+- recurring author phrases;
+- banned phrases;
+- channel defaults;
+- English term tolerance;
+- product examples that sound like the author.
+
+Do not create `.humanizer/`, `voice.json`, sessions, or auto-logs until that
+layer is explicitly designed.
+
+---
+
+## 17. Minimal Style Checklist
 
 Before publishing, ask:
 
@@ -348,12 +426,13 @@ Before publishing, ask:
 - Are lists helping the thought?
 - Are repeated rhetorical patterns removed or justified?
 - Did we run the Russian anti-pattern pass?
+- Did we run the adapted humanizer pass?
 - Is uncertainty visible where needed?
 - Does the ending avoid motivational packaging?
 
 ---
 
-## 15. Summary
+## 18. Summary
 
 The style of Thinking Lab should serve thought.
 

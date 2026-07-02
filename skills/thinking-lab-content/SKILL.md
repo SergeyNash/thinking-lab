@@ -28,6 +28,7 @@ source of truth:
 - `communication/WRITING.md`
 - `communication/STYLE.md`
 - `communication/RUSSIAN_ANTI_PATTERNS.md`
+- `communication/HUMANIZER_RULES.md`
 - `communication/FORMATS.md`
 
 If a document is missing, continue with the closest available project context
@@ -141,12 +142,13 @@ closer to the author's product-minded style.
 Route:
 
 ```text
-draft -> STYLE.md -> RUSSIAN_ANTI_PATTERNS.md -> humanized product voice -> revised draft
+draft -> STYLE.md -> RUSSIAN_ANTI_PATTERNS.md -> HUMANIZER_RULES.md -> product/JTBD voice check -> revised draft
 ```
 
 Do not invent research during humanization. If the reasoning is weak, say so.
 
-Always run the Russian anti-pattern pass before returning the revised draft.
+Always run the Russian anti-pattern pass and the adapted humanizer pass before
+returning the revised draft.
 
 ## Readiness Gate
 
@@ -207,11 +209,40 @@ When drafting:
 - avoid overusing short dramatic sentences;
 - avoid English-calque contrast patterns in Russian;
 - replace contrast templates with concrete causal explanation;
+- avoid bureaucratic Russian and promotional product gloss;
 - avoid abstract placeholder product examples when a real product situation can
   make the point;
 - do not polish weak reasoning into confident prose.
 
-Use `communication/RUSSIAN_ANTI_PATTERNS.md` as the detailed reference.
+Use `communication/RUSSIAN_ANTI_PATTERNS.md` as the high-priority reference.
+Use `communication/HUMANIZER_RULES.md` as the broader adapted humanizer
+reference.
+
+## Drafting and Humanization Pipeline
+
+Use this pipeline for public-facing Russian drafts:
+
+```text
+draft -> Russian anti-pattern pass -> humanizer pass -> product/JTBD voice check -> final readiness check
+```
+
+The pipeline must preserve:
+
+- research question;
+- mechanism;
+- evidence level;
+- uncertainty;
+- limit;
+- product/JTBD lens;
+- Thinking Lab voice.
+
+The pipeline must not:
+
+- invent missing research;
+- strengthen claims without evidence;
+- add intentional mistakes;
+- break punctuation to sound human;
+- turn the text into LinkedIn theater.
 
 ## Russian Anti-Pattern Pass
 
@@ -251,7 +282,36 @@ Better:
 разговоре слишком поздно.
 ```
 
-Smoke rewrites:
+## Humanizer Pass
+
+After the anti-pattern pass, apply `communication/HUMANIZER_RULES.md`.
+
+Scan for:
+
+- era cliches: "в современном мире", "в эпоху цифровой трансформации";
+- inflated claims: "меняет правила игры", "революция", "важный урок для всех";
+- promotional gloss: "бесшовный опыт", "на одной странице";
+- false universality: "каждая команда", "любой лидер";
+- bureaucratic Russian: "является", "данный", "осуществление",
+  "реализация";
+- passive voice that hides responsibility;
+- AI signposting: "важно отметить", "стоит подчеркнуть";
+- generic rule-of-three phrases: "быстро, удобно и надёжно";
+- filler words: repeated "в целом", "по сути", "на самом деле";
+- typographic habits: dash overload, semicolons, inline headers with colons;
+- assistant artifacts: "Надеюсь, это помогло", sycophancy, invitations to
+  continue.
+
+Rewrite toward:
+
+```text
+concrete situation -> visible friction -> mechanism -> product/user consequence -> principle
+```
+
+Do not use the humanizer as an AI detector. Use it as an editing pass for more
+specific, causal, author-like Russian.
+
+## Smoke Rewrites
 
 ```text
 Bad: Это не просто инструмент, это новая культура работы.
@@ -265,8 +325,8 @@ Better: Если команда впервые формулирует польз
 релиз-нотов, коммуникация почти неизбежно получается внутренней.
 
 Bad: Это не про скорость, это про качество решений.
-Better: Скорость здесь вторична. Главный вопрос в том, насколько рано команда
-видит риск и может изменить решение без большой политической цены.
+Better: Скорость здесь вторична. Команде важнее увидеть риск достаточно рано,
+пока решение ещё можно изменить без большой политической цены.
 
 Bad: Фича не только помогает пользователям, но и улучшает удержание.
 Better: Фича помогает пользователям быстрее закончить настройку и чаще
@@ -274,7 +334,36 @@ Better: Фича помогает пользователям быстрее за
 
 Bad: Команда писала релиз-ноты, стараясь объяснить ценность.
 Better: Команда писала релиз-ноты и пыталась объяснить ценность для клиента.
+
+Bad: В современном мире технологии не стоят на месте.
+Better: Git интересен как система, которая сделала промежуточное состояние
+нормальной частью работы.
+
+Bad: Данный подход является эффективным.
+Better: Этот подход работает, если команда видит риск до разработки.
+
+Bad: Решение простое; код сразу заработает.
+Better: Решение простое, и код сразу заработает.
+
+Bad: Скорость: продукт работает быстро.
+Better: Скорость важна только тогда, когда пользователь быстрее завершает свою
+работу.
+
+Bad: Надеюсь, это помогло.
+Better: [remove]
 ```
+
+## Output-Type Adaptation
+
+Apply humanizer rules differently by output type:
+
+- `telegram_note`: allow more spoken rhythm and mild roughness, but no
+  intentional mistakes;
+- `linkedin_post`: keep professional clarity, remove LinkedIn theater;
+- `essay`: prefer cleaner structure and calmer transitions;
+- `working_note`: allow visible uncertainty and unfinished thought;
+- `unfinished_research`: preserve open questions;
+- `failure_analysis`: stay precise and non-moralizing.
 
 ## Knowledge Updates
 
@@ -302,7 +391,8 @@ Expected behavior:
 - infer archaeology of engineering decisions;
 - run at least a light research pass;
 - produce an output plan and Russian draft only if readiness is sufficient;
-- run the Russian anti-pattern pass before returning the draft.
+- run the Russian anti-pattern pass and humanizer pass before returning the
+  draft.
 
 User: "Хочу LinkedIn-пост про KPI, но через инженерное управление."
 
@@ -311,7 +401,7 @@ Expected behavior:
 - infer `linkedin_post`;
 - infer engineering of management;
 - preserve professional tone without thought-leadership theater;
-- remove English-calque Russian syntax.
+- remove English-calque Russian syntax and humanizer markers.
 
 User: "Давай незавершённое исследование: я неделю думаю про AI agents."
 
@@ -336,5 +426,6 @@ Expected behavior:
 - run humanizer pass;
 - reduce generic AI rhythm;
 - apply `RUSSIAN_ANTI_PATTERNS.md`;
+- apply `HUMANIZER_RULES.md`;
 - add product/JTBD lens where useful;
 - do not invent missing research.

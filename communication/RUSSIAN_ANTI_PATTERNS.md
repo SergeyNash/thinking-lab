@@ -1,19 +1,21 @@
 # RUSSIAN ANTI-PATTERNS
 
-This document defines Russian writing patterns that Thinking Lab should avoid
-by default.
+This document defines high-priority Russian writing patterns that Thinking Lab
+avoids by default.
 
 These are not grammar rules. They are style and voice rules for public-facing
 Russian writing.
 
-The goal is to avoid generic AI rhythm, English-calque syntax, empty contrast,
-and abstract product examples that do not sound like a real person.
+This document has priority over the broader adapted humanizer reference in
+`communication/HUMANIZER_RULES.md`. If a rule conflicts, preserve the Thinking
+Lab anti-pattern rule first.
 
 ---
 
 ## 1. Purpose
 
-`RUSSIAN_ANTI_PATTERNS.md` is the detailed reference for Russian anti-patterns.
+`RUSSIAN_ANTI_PATTERNS.md` protects Thinking Lab from the specific Russian
+patterns discovered during real draft work with the author.
 
 Use it when drafting, editing, or humanizing public-facing outputs.
 
@@ -67,7 +69,8 @@ Rewrite rule:
 Avoid:
 
 ```text
-Когда команда поздно пишет релиз-ноты, это может привести к слабой коммуникации.
+Когда команда поздно пишет релиз-ноты, это может привести к слабой
+коммуникации.
 ```
 
 Why it is weak:
@@ -136,7 +139,7 @@ Use it sparingly. Even this construction needs concrete explanation after it.
 Avoid:
 
 ```text
-Фича не только помогает пользователям, но и улучшает retention.
+Фича не только помогает пользователям, но и улучшает удержание.
 ```
 
 Why it is weak:
@@ -252,6 +255,9 @@ The preferred rewrite is usually:
 ```text
 concrete situation -> what became visible -> why it matters -> what changed
 ```
+
+After this pass, run the broader humanizer pass from
+`communication/HUMANIZER_RULES.md`.
 
 ---
 
