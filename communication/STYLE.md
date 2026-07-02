@@ -7,6 +7,9 @@ The default public language is Russian.
 The default voice is intelligent conversational Russian: clear, alive,
 investigative, and human.
 
+Detailed Russian anti-patterns live in
+`communication/RUSSIAN_ANTI_PATTERNS.md`.
+
 ---
 
 ## 1. Purpose
@@ -20,7 +23,8 @@ It helps public writing avoid:
 - academic fog;
 - motivational performance;
 - empty structure;
-- overconfident expertise.
+- overconfident expertise;
+- English-calque Russian syntax.
 
 The style should make thinking easier to follow, not make weak ideas look
 stronger.
@@ -39,6 +43,9 @@ This document owns:
 - use of English terms;
 - sentence and paragraph feel;
 - stylistic quality checks.
+
+Detailed rewrite rules for Russian anti-patterns belong in
+`RUSSIAN_ANTI_PATTERNS.md`.
 
 ---
 
@@ -128,6 +135,9 @@ Do not use English to sound more sophisticated.
 
 Use the term that makes the thought clearer.
 
+When writing in Russian, do not copy English explanatory syntax. Check
+`RUSSIAN_ANTI_PATTERNS.md` before finalizing a public draft.
+
 ---
 
 ## 7. Rhythm
@@ -146,9 +156,9 @@ They should not replace thinking.
 
 Avoid overusing very short standalone sentences such as:
 
-- "This is true."
-- "Especially X."
-- "It is not simple."
+- "Это правда.";
+- "Особенно X.";
+- "Он не простой.";
 
 They can create artificial drama and make the text sound generated. When the
 thought is continuous, keep it in a normal paragraph.
@@ -156,6 +166,16 @@ thought is continuous, keep it in a normal paragraph.
 Avoid repeated question patterns when prose would sound more human. Do not
 stack several lines that all begin with the same phrase if the same idea can be
 said as one clear paragraph.
+
+Also avoid common AI-calque patterns in Russian:
+
+- "это не просто A, это B";
+- "когда/если A, это может привести к B";
+- "это не про A, это про B";
+- unnecessary "не только, но и";
+- decorative participial adverb phrases.
+
+Detailed examples and rewrite rules live in `RUSSIAN_ANTI_PATTERNS.md`.
 
 ---
 
@@ -168,15 +188,17 @@ Good openings may begin with:
 - a strange observation;
 - an incomplete common explanation;
 - a concrete artifact;
-- a system behavior.
+- a system behavior;
+- a recognizable product situation.
 
 Avoid openings like:
 
-- "В современном мире..."
-- "Сегодня поговорим о..."
-- "Ни для кого не секрет..."
-- "В эпоху цифровой трансформации..."
-- "Каждый продуктовый менеджер должен..."
+- "В современном мире...";
+- "Сегодня поговорим о...";
+- "Ни для кого не секрет...";
+- "В эпоху цифровой трансформации...";
+- "Каждый продуктовый менеджер должен...";
+- "Это не просто...";
 
 These phrases usually signal that the text has not found its real tension yet.
 
@@ -193,7 +215,8 @@ Avoid:
 - excessive signposting;
 - phrases that sound polished but empty;
 - fake neutrality;
-- confident claims without friction.
+- confident claims without friction;
+- English-calque Russian syntax.
 
 Bad signal:
 
@@ -203,6 +226,9 @@ Better:
 
 > Если система снижает цену ошибки, люди начинают пробовать чаще. Иногда это
 > важнее, чем сама функция.
+
+Before finalizing Russian drafts, run the anti-pattern pass from
+`RUSSIAN_ANTI_PATTERNS.md`.
 
 ---
 
@@ -237,7 +263,9 @@ Avoid overusing patterns like:
 - "the interesting part is not...";
 - "this is true, but...";
 - "the problem is not A, the problem is B";
-- "not because A, but because B".
+- "not because A, but because B";
+- "это не просто A, это B";
+- "это не про A, это про B".
 
 These moves can be useful once in a text, especially when they clarify a weak
 common explanation. If they appear repeatedly, rewrite the passage as ordinary
@@ -246,15 +274,14 @@ reasoning in paragraphs.
 The preferred feeling is not a sequence of punchlines. It is a person
 explaining how they arrived at a sharper view.
 
-In Russian product writing, avoid the translated pattern:
+In Russian product writing, avoid translated patterns such as:
 
 ```text
 Проблема не в том, что A.
 Проблема в том, что B.
 ```
 
-This often sounds like an English explanatory template. Prefer a causal,
-concrete explanation:
+Prefer a causal, concrete explanation:
 
 ```text
 Со стороны кажется, что безопасность просто тормозит релиз. Но к этому моменту
@@ -264,8 +291,10 @@ concrete explanation:
 ```
 
 The same rule applies to product examples. Do not use abstract placeholder
-examples such as "added a setting", "improved a screen", or "made a flow
-faster" when a concrete product situation would be more human.
+examples such as "добавили настройку", "улучшили экран", or "ускорили
+сценарий" when a concrete product situation would be more human.
+
+See `RUSSIAN_ANTI_PATTERNS.md` for the full list.
 
 ---
 
@@ -318,6 +347,7 @@ Before publishing, ask:
 - Are English terms used because they clarify?
 - Are lists helping the thought?
 - Are repeated rhetorical patterns removed or justified?
+- Did we run the Russian anti-pattern pass?
 - Is uncertainty visible where needed?
 - Does the ending avoid motivational packaging?
 
@@ -333,3 +363,4 @@ The short version:
 > Keep the product/JTBD lens visible when it helps the reader.
 > Do not perform expertise.
 > Do not let style outrun understanding.
+> Do not announce depth through templates.

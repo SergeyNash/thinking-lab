@@ -27,6 +27,7 @@ source of truth:
 - `modules/editor.md`
 - `communication/WRITING.md`
 - `communication/STYLE.md`
+- `communication/RUSSIAN_ANTI_PATTERNS.md`
 - `communication/FORMATS.md`
 
 If a document is missing, continue with the closest available project context
@@ -140,10 +141,12 @@ closer to the author's product-minded style.
 Route:
 
 ```text
-draft -> STYLE.md -> humanized product voice -> revised draft
+draft -> STYLE.md -> RUSSIAN_ANTI_PATTERNS.md -> humanized product voice -> revised draft
 ```
 
 Do not invent research during humanization. If the reasoning is weak, say so.
+
+Always run the Russian anti-pattern pass before returning the revised draft.
 
 ## Readiness Gate
 
@@ -202,12 +205,35 @@ When drafting:
 - avoid generic AI tone and LinkedIn theater;
 - avoid repetitive bullet-question patterns;
 - avoid overusing short dramatic sentences;
-- avoid English-calque contrast patterns in Russian, especially "the problem
-  is not A, the problem is B";
+- avoid English-calque contrast patterns in Russian;
 - replace contrast templates with concrete causal explanation;
 - avoid abstract placeholder product examples when a real product situation can
   make the point;
 - do not polish weak reasoning into confident prose.
+
+Use `communication/RUSSIAN_ANTI_PATTERNS.md` as the detailed reference.
+
+## Russian Anti-Pattern Pass
+
+Before returning a public-facing draft or humanized text, scan for:
+
+- `это не просто`;
+- `это не про`;
+- `проблема не в том`;
+- `когда/если ..., это`;
+- `может привести к`;
+- unnecessary `не только, но и`;
+- participial adverb phrases that blur the main action;
+- abstract placeholder product examples.
+
+Rewrite using:
+
+- concrete situation;
+- direct Russian syntax;
+- causal explanation;
+- visible product context;
+- simple verb clauses;
+- normal `и` instead of fake contrast.
 
 Bad pattern:
 
@@ -223,6 +249,31 @@ Better:
 команда уже выбрала решение, написала код, договорилась о сроках и почти дошла
 до выкатки. Любой найденный риск теперь стоит дорого, потому что он появился в
 разговоре слишком поздно.
+```
+
+Smoke rewrites:
+
+```text
+Bad: Это не просто инструмент, это новая культура работы.
+Better: Инструмент стал важен, когда изменил повседневную работу команды:
+появился общий способ пробовать, ошибаться и возвращаться назад без большой
+цены.
+
+Bad: Когда команда поздно пишет релиз-ноты, это может привести к слабой
+коммуникации.
+Better: Если команда впервые формулирует пользу для клиента во время
+релиз-нотов, коммуникация почти неизбежно получается внутренней.
+
+Bad: Это не про скорость, это про качество решений.
+Better: Скорость здесь вторична. Главный вопрос в том, насколько рано команда
+видит риск и может изменить решение без большой политической цены.
+
+Bad: Фича не только помогает пользователям, но и улучшает удержание.
+Better: Фича помогает пользователям быстрее закончить настройку и чаще
+вернуться к сценарию на следующий день.
+
+Bad: Команда писала релиз-ноты, стараясь объяснить ценность.
+Better: Команда писала релиз-ноты и пыталась объяснить ценность для клиента.
 ```
 
 ## Knowledge Updates
@@ -250,7 +301,8 @@ Expected behavior:
 - infer `telegram_note`;
 - infer archaeology of engineering decisions;
 - run at least a light research pass;
-- produce an output plan and Russian draft only if readiness is sufficient.
+- produce an output plan and Russian draft only if readiness is sufficient;
+- run the Russian anti-pattern pass before returning the draft.
 
 User: "Хочу LinkedIn-пост про KPI, но через инженерное управление."
 
@@ -258,7 +310,8 @@ Expected behavior:
 
 - infer `linkedin_post`;
 - infer engineering of management;
-- preserve professional tone without thought-leadership theater.
+- preserve professional tone without thought-leadership theater;
+- remove English-calque Russian syntax.
 
 User: "Давай незавершённое исследование: я неделю думаю про AI agents."
 
@@ -282,5 +335,6 @@ Expected behavior:
 
 - run humanizer pass;
 - reduce generic AI rhythm;
+- apply `RUSSIAN_ANTI_PATTERNS.md`;
 - add product/JTBD lens where useful;
 - do not invent missing research.
