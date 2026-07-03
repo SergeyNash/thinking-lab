@@ -443,6 +443,11 @@ modules/
 skills/
   russian-humanizer/
     SKILL.md
+    agents/openai.yaml
+    references/
+      HUMANIZER_CORE.md
+      MODES.md
+      VOICE_ADAPTERS.md
   thinking-lab-content/
     SKILL.md
 
@@ -468,6 +473,10 @@ Thinking Lab uses it through:
 The standalone skill is:
 
 - `skills/russian-humanizer/SKILL.md`
+
+It is self-contained. Its bundled `references/` copy the portable humanizer
+documents, so the skill can be installed in Codex without the Thinking Lab
+repository.
 
 Use `russian-humanizer` for direct Russian text editing outside Thinking Lab.
 Use `thinking-lab-content` when the request needs research flow, module

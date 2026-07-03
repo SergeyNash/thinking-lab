@@ -10,20 +10,31 @@ description: Edit, humanize, and adapt Russian text without running Thinking Lab
 Use this skill to revise Russian text directly.
 
 This is a portable editing skill, not a Thinking Lab research skill. It does
-not run modules, update knowledge files, choose publication strategy, or add
-product/JTBD thinking unless the selected mode or user request explicitly calls
-for it.
+not require the Thinking Lab repository. It does not run modules, update
+knowledge files, choose publication strategy, or add product/JTBD thinking
+unless the selected mode or user request explicitly calls for it.
 
 ## Source Documents
 
-When working inside this repository, use:
+Use the bundled references:
 
-- `humanizer/HUMANIZER_CORE.md`
-- `humanizer/MODES.md`
-- `humanizer/VOICE_ADAPTERS.md`
+- `references/HUMANIZER_CORE.md`
+- `references/MODES.md`
+- `references/VOICE_ADAPTERS.md`
 
-If the user specifically asks for Thinking Lab content, use
-`skills/thinking-lab-content/SKILL.md` instead.
+If the user specifically asks for Thinking Lab research/content flow, this is
+the wrong skill.
+
+## Installation
+
+To use this skill globally in Codex, copy the whole skill folder to:
+
+```text
+%USERPROFILE%\.codex\skills\russian-humanizer
+```
+
+The folder is self-contained. It includes `SKILL.md`, `agents/openai.yaml`, and
+all reference files needed for editing.
 
 ## Intake
 
@@ -51,7 +62,7 @@ Ask only when the missing answer materially changes the edit.
 
 ## Mode Selection
 
-Use modes from `humanizer/MODES.md`:
+Use modes from `references/MODES.md`:
 
 - `general`: neutral Russian drafts.
 - `product_content`: product, engineering, security, management, technology.

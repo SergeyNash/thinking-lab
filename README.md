@@ -370,6 +370,11 @@ rules живут в [humanizer/HUMANIZER_CORE.md](humanizer/HUMANIZER_CORE.md), 
 Thinking Lab-specific правила остаются в `communication/`: research-first
 логика, product/JTBD voice, output formats и anti-LinkedIn theater.
 
+Для использования вне Thinking Lab есть self-contained skill
+[skills/russian-humanizer](skills/russian-humanizer/). Его можно целиком
+скопировать в `%USERPROFILE%\.codex\skills\russian-humanizer`, и он будет
+работать без этого репозитория.
+
 ---
 
 ## Поток знаний
@@ -609,6 +614,11 @@ modules/
 skills/
   russian-humanizer/
     SKILL.md
+    agents/openai.yaml
+    references/
+      HUMANIZER_CORE.md
+      MODES.md
+      VOICE_ADAPTERS.md
   thinking-lab-content/
     SKILL.md
 
