@@ -419,7 +419,14 @@ knowledge/
 communication/
   WRITING.md
   STYLE.md
+  HUMANIZER_RULES.md
   FORMATS.md
+
+humanizer/
+  README.md
+  HUMANIZER_CORE.md
+  MODES.md
+  VOICE_ADAPTERS.md
 
 orchestration/
   CONTENT_FLOW.md
@@ -434,6 +441,8 @@ modules/
   editor.md
 
 skills/
+  russian-humanizer/
+    SKILL.md
   thinking-lab-content/
     SKILL.md
 
@@ -444,7 +453,27 @@ outputs/
 This structure is intentionally lightweight.
 It should evolve only when real usage shows that more structure is needed.
 
-### 6.3. Prompts
+### 6.3. Portable Humanizer
+
+`humanizer/` is a reusable Russian editing layer.
+
+It is separate from Thinking Lab methodology. It does not define research
+method, knowledge storage, output strategy, or product/JTBD voice.
+
+Thinking Lab uses it through:
+
+- `communication/HUMANIZER_RULES.md`
+- `skills/thinking-lab-content/SKILL.md`
+
+The standalone skill is:
+
+- `skills/russian-humanizer/SKILL.md`
+
+Use `russian-humanizer` for direct Russian text editing outside Thinking Lab.
+Use `thinking-lab-content` when the request needs research flow, module
+routing, output decisions, or Thinking Lab product voice.
+
+### 6.4. Prompts
 
 Prompts are implementation details.
 
@@ -457,7 +486,7 @@ This means:
 - multiple prompts may support one module;
 - shared principles should not be duplicated across prompts.
 
-### 6.4. Automation
+### 6.5. Automation
 
 Automation may be added later for:
 
@@ -472,7 +501,7 @@ Automation may be added later for:
 
 Automation should not be added before the reasoning process is understood.
 
-### 6.5. Orchestration
+### 6.6. Orchestration
 
 Orchestration coordinates the existing layers during real use.
 

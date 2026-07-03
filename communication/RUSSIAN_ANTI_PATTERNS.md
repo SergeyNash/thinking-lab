@@ -6,9 +6,9 @@ avoids by default.
 These are not grammar rules. They are style and voice rules for public-facing
 Russian writing.
 
-This document has priority over the broader adapted humanizer reference in
-`communication/HUMANIZER_RULES.md`. If a rule conflicts, preserve the Thinking
-Lab anti-pattern rule first.
+This document has priority over the portable humanizer core in
+`humanizer/HUMANIZER_CORE.md`. If a rule conflicts, preserve the Thinking Lab
+anti-pattern rule first.
 
 ---
 
@@ -256,7 +256,8 @@ The preferred rewrite is usually:
 concrete situation -> what became visible -> why it matters -> what changed
 ```
 
-After this pass, run the broader humanizer pass from
+After this pass, run the portable humanizer pass from
+`humanizer/HUMANIZER_CORE.md`, then apply the Thinking Lab adapter from
 `communication/HUMANIZER_RULES.md`.
 
 ---

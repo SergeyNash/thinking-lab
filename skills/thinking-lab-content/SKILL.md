@@ -29,6 +29,8 @@ source of truth:
 - `communication/STYLE.md`
 - `communication/RUSSIAN_ANTI_PATTERNS.md`
 - `communication/HUMANIZER_RULES.md`
+- `humanizer/HUMANIZER_CORE.md`
+- `humanizer/MODES.md`
 - `communication/FORMATS.md`
 
 If a document is missing, continue with the closest available project context
@@ -142,13 +144,13 @@ closer to the author's product-minded style.
 Route:
 
 ```text
-draft -> STYLE.md -> RUSSIAN_ANTI_PATTERNS.md -> HUMANIZER_RULES.md -> product/JTBD voice check -> revised draft
+draft -> STYLE.md -> RUSSIAN_ANTI_PATTERNS.md -> HUMANIZER_CORE.md -> HUMANIZER_RULES.md -> product/JTBD voice check -> revised draft
 ```
 
 Do not invent research during humanization. If the reasoning is weak, say so.
 
-Always run the Russian anti-pattern pass and the adapted humanizer pass before
-returning the revised draft.
+Always run the Russian anti-pattern pass, portable humanizer pass, and Thinking
+Lab adapter before returning the revised draft.
 
 ## Readiness Gate
 
@@ -214,16 +216,17 @@ When drafting:
   make the point;
 - do not polish weak reasoning into confident prose.
 
-Use `communication/RUSSIAN_ANTI_PATTERNS.md` as the high-priority reference.
-Use `communication/HUMANIZER_RULES.md` as the broader adapted humanizer
-reference.
+Use `communication/RUSSIAN_ANTI_PATTERNS.md` as the high-priority Thinking Lab
+anti-pattern reference.
+Use `humanizer/HUMANIZER_CORE.md` as the portable humanizer core.
+Use `communication/HUMANIZER_RULES.md` as the Thinking Lab adapter on top.
 
 ## Drafting and Humanization Pipeline
 
 Use this pipeline for public-facing Russian drafts:
 
 ```text
-draft -> Russian anti-pattern pass -> humanizer pass -> product/JTBD voice check -> final readiness check
+draft -> Russian anti-pattern pass -> portable humanizer pass -> Thinking Lab adapter -> product/JTBD voice check -> final readiness check
 ```
 
 The pipeline must preserve:
@@ -284,7 +287,8 @@ Better:
 
 ## Humanizer Pass
 
-After the anti-pattern pass, apply `communication/HUMANIZER_RULES.md`.
+After the anti-pattern pass, apply `humanizer/HUMANIZER_CORE.md` with the
+closest mode from `humanizer/MODES.md`.
 
 Scan for:
 
@@ -310,6 +314,14 @@ concrete situation -> visible friction -> mechanism -> product/user consequence 
 
 Do not use the humanizer as an AI detector. Use it as an editing pass for more
 specific, causal, author-like Russian.
+
+Then apply `communication/HUMANIZER_RULES.md` as the Thinking Lab adapter:
+
+- preserve research/evidence discipline;
+- preserve product/JTBD voice where useful;
+- apply platform behavior from `communication/FORMATS.md`;
+- remove LinkedIn theater;
+- keep the draft from becoming generic prose.
 
 ## Smoke Rewrites
 
@@ -426,6 +438,7 @@ Expected behavior:
 - run humanizer pass;
 - reduce generic AI rhythm;
 - apply `RUSSIAN_ANTI_PATTERNS.md`;
+- apply `HUMANIZER_CORE.md`;
 - apply `HUMANIZER_RULES.md`;
 - add product/JTBD lens where useful;
 - do not invent missing research.

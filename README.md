@@ -342,6 +342,7 @@ Communication отвечает за превращение понимания в
 
 - [communication/WRITING.md](communication/WRITING.md)
 - [communication/STYLE.md](communication/STYLE.md)
+- [communication/HUMANIZER_RULES.md](communication/HUMANIZER_RULES.md)
 - [communication/FORMATS.md](communication/FORMATS.md)
 
 Этот слой не должен заставлять систему публиковать больше. Он нужен для того,
@@ -356,6 +357,18 @@ LinkedIn-пафоса и generic AI-ритма. После первого пра
 voice: писать как продуктовый инженер или руководитель продукта, держать в
 фокусе JTBD, работу пользователя, трение, цену действия и изменение поведения
 команды.
+
+### Humanizer
+
+Humanizer — это отдельный reusable layer для живого русского текста.
+
+Он лежит в [humanizer/](humanizer/) и может применяться вне Thinking Lab: к
+главам книги, деловым текстам, эссе, постам или обычным черновикам.
+
+Thinking Lab использует Humanizer как зависимость, но не равен ему. Universal
+rules живут в [humanizer/HUMANIZER_CORE.md](humanizer/HUMANIZER_CORE.md), а
+Thinking Lab-specific правила остаются в `communication/`: research-first
+логика, product/JTBD voice, output formats и anti-LinkedIn theater.
 
 ---
 
@@ -572,7 +585,14 @@ knowledge/
 communication/
   WRITING.md
   STYLE.md
+  HUMANIZER_RULES.md
   FORMATS.md
+
+humanizer/
+  README.md
+  HUMANIZER_CORE.md
+  MODES.md
+  VOICE_ADAPTERS.md
 
 orchestration/
   CONTENT_FLOW.md
@@ -587,6 +607,8 @@ modules/
   editor.md
 
 skills/
+  russian-humanizer/
+    SKILL.md
   thinking-lab-content/
     SKILL.md
 
