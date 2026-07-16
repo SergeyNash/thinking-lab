@@ -390,6 +390,11 @@ Use `humanizer/HUMANIZER_CORE.md` to check:
 - typographic habits;
 - assistant-style closings.
 
+For source-based LinkedIn notes or compact technical reviews, prefer
+`dry_overview` mode from `humanizer/MODES.md`: source, case, concrete result,
+practical implication. Do not force personal storytelling, product lessons, or
+large philosophical framing when the user asks for a dry overview.
+
 Do not intentionally add mistakes.
 
 Do not break punctuation to sound human.

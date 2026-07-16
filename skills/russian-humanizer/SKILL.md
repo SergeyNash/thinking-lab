@@ -1,6 +1,6 @@
 ---
 name: russian-humanizer
-description: Edit, humanize, and adapt Russian text without running Thinking Lab research. Use when the user asks to make Russian text more human, natural, less AI-like, less bureaucratic, or closer to an author/project voice; supports fiction, product content, business text, essays, and chat replies while preserving meaning.
+description: Edit, humanize, and adapt Russian text without running Thinking Lab research. Use when the user asks to make Russian text more human, natural, less AI-like, less bureaucratic, or closer to an author/project voice; supports fiction, dry analytical overviews, product content, business text, essays, and chat replies while preserving meaning.
 ---
 
 # Russian Humanizer
@@ -66,13 +66,16 @@ Use modes from `references/MODES.md`:
 
 - `general`: neutral Russian drafts.
 - `product_content`: product, engineering, security, management, technology.
+- `dry_overview`: compact analytical notes about sources, technical cases,
+  research results, and product/security updates.
 - `fiction`: chapters, scenes, dialogue, narrative prose.
 - `business`: memos, requirements, reports, emails.
 - `essay`: long-form argument or reflective writing.
 - `chat_reply`: conversational replies.
 
 Do not apply the wrong mode. A book chapter should not receive product-content
-logic. A business memo should not become chatty fiction.
+logic. A dry overview should not become a personal essay. A business memo
+should not become chatty fiction.
 
 ## Core Workflow
 
@@ -97,6 +100,35 @@ During editing:
 
 If the text is weak by meaning, say what is missing instead of making it sound
 confident.
+
+## Dry Overview Mode
+
+Use `dry_overview` for compact analytical notes about a source, article,
+release, research result, product update, or technical case.
+
+Priorities:
+
+- start with the source and the factual subject;
+- keep one main case or mechanism in focus;
+- include the source link when the note depends on a specific publication;
+- avoid personal framing unless asked;
+- avoid storytelling, manifestos, moral lessons, and broad philosophical
+  claims;
+- avoid phrases such as "интерес здесь", "хороший сигнал", "плохой сигнал",
+  "таким образом мы видим";
+- avoid vague references to "answer" when the subject is an LLM or agent;
+- name the actor precisely: model, LLM, agent, system, tool, product contour;
+- avoid `не A, а B` contrast patterns;
+- end with a concrete consequence or boundary.
+
+Typical shape:
+
+```text
+source/publication -> what was tested -> concrete result -> why the case
+matters -> final implication
+```
+
+Do not turn dry overview into a story about the author's thinking.
 
 ## Fiction Mode
 

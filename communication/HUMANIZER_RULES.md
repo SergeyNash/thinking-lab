@@ -83,6 +83,8 @@ Use portable humanizer modes as a base, then apply Thinking Lab formats:
 - `telegram_note`: use `general` or `product_content`, allow more spoken rhythm;
 - `linkedin_post`: use `product_content`, keep professional clarity, remove
   performance and self-branding;
+- source-based LinkedIn overview: use `dry_overview`, keep the source, case,
+  result, and final implication visible;
 - `essay`: use `essay`, preserve continuity and evidence;
 - `working_note`: use `general`, keep uncertainty visible;
 - `unfinished_research`: use `general`, do not force closure;

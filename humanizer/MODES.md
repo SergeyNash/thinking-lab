@@ -41,7 +41,53 @@ Thinking Lab adds its own research and JTBD constraints through an adapter.
 
 ---
 
-## 3. Fiction
+## 3. Dry Overview
+
+Use for short analytical notes about a source, article, release, research
+result, product update, or technical case.
+
+Default behavior:
+
+- start with the source and the factual subject;
+- keep one main case or mechanism in focus;
+- include the source link when the note depends on a specific publication;
+- avoid personal framing unless the user asks for it;
+- avoid storytelling, manifestos, moral lessons, and broad philosophical
+  claims;
+- avoid phrases such as "interesting here is", "good/bad signal", "this shows
+  that", "thus we see";
+- avoid unclear references to "answer" when the subject is an LLM or agent;
+- name the actor precisely: model, LLM, agent, system, tool, product contour;
+- avoid `not A, but B` contrast patterns;
+- finish with a concrete consequence or boundary, not a lecture.
+
+Typical dry overview shape:
+
+```text
+source/publication -> what was tested -> concrete result -> why the case
+matters -> final implication
+```
+
+Example:
+
+```text
+OpenAI described GPT-Red, a system for automated red teaming of AI agents.
+One case involved an AI agent connected to a vending machine: inventory,
+prices, and customer orders. GPT-Red found scenarios where the agent changed
+prices and cancelled another customer's order.
+
+The case matters because the LLM had tools and could change product state. The
+risk sits in the actions available to the agent: which data it treats as
+instruction, which tools it calls, and which changes it can make without
+confirmation.
+```
+
+This mode is useful for LinkedIn notes that should stay informative without
+becoming a personal essay.
+
+---
+
+## 4. Fiction
 
 Use for stories, chapters, scenes, dialogue, and narrative prose.
 
@@ -72,7 +118,7 @@ row without a deliberate beat, merge them into a smoother paragraph.
 
 ---
 
-## 4. Business
+## 5. Business
 
 Use for memos, requirements, emails, reports, product documents, and internal
 communication.
@@ -90,7 +136,7 @@ Business mode should become clearer, not more casual.
 
 ---
 
-## 5. Essay
+## 6. Essay
 
 Use for long-form argument, reflective writing, and structured explanation.
 
@@ -107,7 +153,7 @@ Essay mode can tolerate more complex sentences than posts or chat replies.
 
 ---
 
-## 6. Chat Reply
+## 7. Chat Reply
 
 Use for conversational replies.
 
@@ -130,12 +176,14 @@ unless the interaction explicitly needs a follow-up offer.
 
 ---
 
-## 7. Mode Selection
+## 8. Mode Selection
 
 If mode is unclear:
 
 - use `fiction` for chapters, scenes, characters, dialogue, narrative prose;
 - use `business` for documents, specs, emails, requirements;
+- use `dry_overview` for compact analytical notes about a source or technical
+  case;
 - use `product_content` for product/engineering posts and articles;
 - use `essay` for long reflective argument;
 - use `chat_reply` for conversational responses;

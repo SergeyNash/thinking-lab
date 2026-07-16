@@ -105,6 +105,15 @@ Make this article less AI-like, preserve the argument, and keep the author's
 position.
 ```
 
+For dry source-based notes:
+
+```text
+Use russian-humanizer.
+Mode: dry_overview.
+Write a compact LinkedIn note based on this source. Keep the source, concrete
+case, result, and final implication. Avoid storytelling and broad lessons.
+```
+
 This does not require Thinking Lab. Thinking Lab is needed only for research
 flow, content orchestration, product/JTBD voice, and output decisions.
 
@@ -112,8 +121,8 @@ flow, content orchestration, product/JTBD voice, and output decisions.
 
 ## Basic Use
 
-1. Identify the text mode: `general`, `product_content`, `fiction`,
-   `business`, `essay`, or `chat_reply`.
+1. Identify the text mode: `general`, `product_content`, `dry_overview`,
+   `fiction`, `business`, `essay`, or `chat_reply`.
 2. Preserve the original meaning and author intent.
 3. Apply `HUMANIZER_CORE.md`.
 4. Apply a project-specific voice adapter, if one exists.
