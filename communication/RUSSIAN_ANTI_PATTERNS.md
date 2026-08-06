@@ -256,7 +256,7 @@ The preferred rewrite is usually:
 concrete situation -> what became visible -> why it matters -> what changed
 ```
 
-After this pass, run the portable humanizer pass from
+After this pass, run `skills/humanize-ru`, then the portable humanizer pass from
 `humanizer/HUMANIZER_CORE.md`, then apply the Thinking Lab adapter from
 `communication/HUMANIZER_RULES.md`.
 

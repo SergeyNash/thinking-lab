@@ -143,7 +143,7 @@ product-minded, or closer to the author's voice.
 Route:
 
 ```text
-draft -> STYLE.md -> humanized product voice -> revised draft
+draft -> STYLE.md -> RUSSIAN_ANTI_PATTERNS.md -> humanize-ru -> HUMANIZER_CORE.md -> HUMANIZER_RULES.md -> product/JTBD voice check -> revised draft
 ```
 
 Do not invent new research during humanization. If reasoning is weak, say so.

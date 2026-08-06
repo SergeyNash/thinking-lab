@@ -12,6 +12,8 @@ Detailed Russian anti-patterns live in
 
 Portable humanizer rules live in `humanizer/HUMANIZER_CORE.md`.
 
+Register-safe AI-marker removal lives in `skills/humanize-ru/`.
+
 Thinking Lab humanizer overrides live in `communication/HUMANIZER_RULES.md`.
 
 ---
@@ -48,13 +50,15 @@ This document owns:
 - use of English terms;
 - sentence and paragraph feel;
 - stylistic quality checks;
-- integration order for anti-pattern, portable humanizer, and Thinking Lab
-  adapter passes.
+- integration order for anti-pattern, humanize-ru, portable humanizer, and
+  Thinking Lab adapter passes.
 
 Detailed rewrite rules for high-priority Russian anti-patterns belong in
 `RUSSIAN_ANTI_PATTERNS.md`.
 
 Portable humanizer rules belong in `humanizer/HUMANIZER_CORE.md`.
+
+AI-marker diagnosis by register belongs in `skills/humanize-ru/`.
 
 Thinking Lab-specific humanizer rules belong in `HUMANIZER_RULES.md`.
 
@@ -80,9 +84,10 @@ Apply writing rules in this order:
 1. preserve meaning, evidence, uncertainty, and limits;
 2. preserve Thinking Lab product/JTBD voice;
 3. apply `RUSSIAN_ANTI_PATTERNS.md`;
-4. apply `humanizer/HUMANIZER_CORE.md`;
-5. apply `communication/HUMANIZER_RULES.md` as the Thinking Lab adapter;
-6. adapt to the selected platform format.
+4. apply `skills/humanize-ru` (register + AI markers);
+5. apply `humanizer/HUMANIZER_CORE.md`;
+6. apply `communication/HUMANIZER_RULES.md` as the Thinking Lab adapter;
+7. adapt to the selected platform format.
 
 Style must never outrun understanding.
 
@@ -164,8 +169,8 @@ Do not use English to sound more sophisticated.
 Use the term that makes the thought clearer.
 
 When writing in Russian, do not copy English explanatory syntax. Check
-`RUSSIAN_ANTI_PATTERNS.md`, `humanizer/HUMANIZER_CORE.md`, and
-`HUMANIZER_RULES.md` before finalizing a public draft.
+`RUSSIAN_ANTI_PATTERNS.md`, `skills/humanize-ru`, `humanizer/HUMANIZER_CORE.md`,
+and `HUMANIZER_RULES.md` before finalizing a public draft.
 
 ---
 
@@ -261,9 +266,9 @@ Better:
 ```
 
 Before finalizing Russian drafts, run the anti-pattern pass from
-`RUSSIAN_ANTI_PATTERNS.md`, then the portable humanizer pass from
-`humanizer/HUMANIZER_CORE.md`, then the Thinking Lab adapter from
-`HUMANIZER_RULES.md`.
+`RUSSIAN_ANTI_PATTERNS.md`, then `skills/humanize-ru`, then the portable
+humanizer pass from `humanizer/HUMANIZER_CORE.md`, then the Thinking Lab
+adapter from `HUMANIZER_RULES.md`.
 
 ---
 
@@ -329,7 +334,8 @@ The same rule applies to product examples. Do not use abstract placeholder
 examples such as "добавили настройку", "улучшили экран", or "ускорили
 сценарий" when a concrete product situation would be more human.
 
-See `RUSSIAN_ANTI_PATTERNS.md` for the highest-priority rules and
+See `RUSSIAN_ANTI_PATTERNS.md` for the highest-priority rules,
+`skills/humanize-ru` for register-safe AI-marker cleanup, and
 `humanizer/HUMANIZER_CORE.md` for the broader portable humanizer pass.
 Use `HUMANIZER_RULES.md` only for Thinking Lab-specific overrides.
 
@@ -373,8 +379,12 @@ If a move starts to sound like a reusable phrase, rewrite it in plainer prose.
 
 ## 15. Humanizer Pass
 
-The portable humanizer pass removes markers that make Russian text sound
-generated or generic.
+First run `skills/humanize-ru` for register-safe AI-marker diagnosis and
+cleanup. For Thinking Lab articles and essays, default register is
+Публицистический when unsure. Load its references before transforming.
+
+Then the portable humanizer pass removes remaining markers that make Russian
+text sound generated or generic.
 
 Use `humanizer/HUMANIZER_CORE.md` to check:
 
@@ -440,6 +450,7 @@ Before publishing, ask:
 - Are lists helping the thought?
 - Are repeated rhetorical patterns removed or justified?
 - Did we run the Russian anti-pattern pass?
+- Did we run the humanize-ru AI-marker pass?
 - Did we run the portable humanizer pass?
 - Did we apply the Thinking Lab humanizer adapter?
 - Is uncertainty visible where needed?

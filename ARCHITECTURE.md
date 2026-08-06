@@ -441,6 +441,14 @@ modules/
   editor.md
 
 skills/
+  humanize-ru/
+    SKILL.md
+    LICENSE
+    SOURCE.md
+    references/
+      ai-markers.md
+      transformations.md
+      checklist.md
   russian-humanizer/
     SKILL.md
     agents/openai.yaml
@@ -469,16 +477,23 @@ Thinking Lab uses it through:
 
 - `communication/HUMANIZER_RULES.md`
 - `skills/thinking-lab-content/SKILL.md`
+- `skills/humanize-ru/SKILL.md` (register-safe AI-marker pass before the
+  portable core)
 
-The standalone skill is:
+The standalone skills are:
 
-- `skills/russian-humanizer/SKILL.md`
+- `skills/russian-humanizer/SKILL.md` — modes and voice adapters
+- `skills/humanize-ru/SKILL.md` — AI-marker diagnosis by register (vendored
+  from [v0lka/skills humanize-ru](https://github.com/v0lka/skills/tree/main/writing/humanize-ru))
 
-It is self-contained. Its bundled `references/` copy the portable humanizer
-documents, so the skill can be installed in Codex without the Thinking Lab
-repository.
+`russian-humanizer` is self-contained. Its bundled `references/` copy the
+portable humanizer documents, so the skill can be installed in Codex without
+the Thinking Lab repository.
 
-Use `russian-humanizer` for direct Russian text editing outside Thinking Lab.
+Use `humanize-ru` when the task is removing AI markers while preserving
+register.
+Use `russian-humanizer` for direct Russian text editing outside Thinking Lab
+(modes / voice).
 Use `thinking-lab-content` when the request needs research flow, module
 routing, output decisions, or Thinking Lab product voice.
 

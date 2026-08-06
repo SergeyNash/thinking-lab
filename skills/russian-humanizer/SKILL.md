@@ -25,6 +25,9 @@ Use the bundled references:
 If the user specifically asks for Thinking Lab research/content flow, this is
 the wrong skill.
 
+For pure AI-marker diagnosis by register (without mode/voice adaptation), prefer
+`skills/humanize-ru` when available in the Thinking Lab repository.
+
 ## Installation
 
 To use this skill globally in Codex, copy the whole skill folder to:

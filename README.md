@@ -375,6 +375,12 @@ Thinking Lab-specific правила остаются в `communication/`: resea
 скопировать в `%USERPROFILE%\.codex\skills\russian-humanizer`, и он будет
 работать без этого репозитория.
 
+Отдельно vendored skill
+[skills/humanize-ru](skills/humanize-ru/) снимает AI-маркеры с сохранением
+регистра (диагностика → трансформация → checklist). В пайплайне драфтов он
+идёт после anti-patterns и до `HUMANIZER_CORE`. Не заменяет
+`russian-humanizer`: modes и voice adapters остаются в portable humanizer.
+
 ---
 
 ## Поток знаний
@@ -612,6 +618,14 @@ modules/
   editor.md
 
 skills/
+  humanize-ru/
+    SKILL.md
+    LICENSE
+    SOURCE.md
+    references/
+      ai-markers.md
+      transformations.md
+      checklist.md
   russian-humanizer/
     SKILL.md
     agents/openai.yaml

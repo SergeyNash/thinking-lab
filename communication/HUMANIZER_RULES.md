@@ -40,9 +40,10 @@ Apply rules in this order:
 1. preserve reasoning, evidence, uncertainty, and limits;
 2. preserve Thinking Lab voice;
 3. apply `communication/RUSSIAN_ANTI_PATTERNS.md`;
-4. apply `humanizer/HUMANIZER_CORE.md`;
-5. apply this Thinking Lab adapter;
-6. adapt to the selected output format from `communication/FORMATS.md`.
+4. apply `skills/humanize-ru` (register + AI-marker diagnosis and cleanup);
+5. apply `humanizer/HUMANIZER_CORE.md`;
+6. apply this Thinking Lab adapter;
+7. adapt to the selected output format from `communication/FORMATS.md`.
 
 If a humanizer rule would remove important uncertainty or make a weak idea
 sound stronger than it is, return to reasoning instead of polishing.
@@ -111,10 +112,12 @@ Before returning a public-facing Thinking Lab draft:
 
 1. Check readiness: question, mechanism, evidence level, limit.
 2. Run `communication/RUSSIAN_ANTI_PATTERNS.md`.
-3. Run `humanizer/HUMANIZER_CORE.md` with the closest mode from
+3. Run `skills/humanize-ru` for register-safe AI-marker removal (default
+   register for articles: Публицистический).
+4. Run `humanizer/HUMANIZER_CORE.md` with the closest mode from
    `humanizer/MODES.md`.
-4. Apply this adapter: product/JTBD voice, output format, anti-LinkedIn theater.
-5. Confirm that the draft still sounds like Thinking Lab, not generic prose.
+5. Apply this adapter: product/JTBD voice, output format, anti-LinkedIn theater.
+6. Confirm that the draft still sounds like Thinking Lab, not generic prose.
 
 Preferred Thinking Lab rewrite shape:
 
@@ -128,5 +131,6 @@ artifact or situation -> tension -> mechanism -> product/system consequence -> p
 
 The short version:
 
+> `humanize-ru` removes AI markers without breaking register.
 > Portable humanizer makes the Russian alive.
 > Thinking Lab adapter keeps the research, product lens, and output discipline.

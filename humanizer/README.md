@@ -57,7 +57,22 @@ Project-specific rules belong in voice adapters.
 - `VOICE_ADAPTERS.md` explains how to layer a project or author voice on top.
 
 Thinking Lab uses this layer through `communication/HUMANIZER_RULES.md`, which
-adds research-first and product/JTBD constraints.
+adds research-first and product/JTBD constraints. In the full draft pipeline,
+`skills/humanize-ru` runs before this core for register-safe AI-marker removal.
+
+---
+
+## Related Skills
+
+| Skill | Role |
+| ----- | ---- |
+| `skills/humanize-ru/` | Register + explicit AI-marker diagnosis/cleanup. Does not define modes or project voice. |
+| `skills/russian-humanizer/` | Portable modes (`fiction`, `essay`, `product_content`, …) and voice adapters. |
+| `skills/thinking-lab-content/` | Research/content orchestration that runs the full editing pipeline. |
+
+Use `humanize-ru` when the main job is “remove machine markers, keep register.”
+Use `russian-humanizer` when the main job is mode/voice editing without Thinking
+Lab research.
 
 ---
 
