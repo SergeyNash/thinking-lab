@@ -260,7 +260,8 @@ Before returning a public-facing draft or humanized text, scan for:
 - `может привести к`;
 - unnecessary `не только, но и`;
 - participial adverb phrases that blur the main action;
-- abstract placeholder product examples.
+- abstract placeholder product examples;
+- slide / deck metaphors (`в слайдах это…`).
 
 Rewrite using:
 

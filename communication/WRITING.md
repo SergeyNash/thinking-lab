@@ -100,6 +100,10 @@ Good openings often contain:
 - a cost structure;
 - a failure mode.
 
+Do not open or explain through slide-deck language (`в слайдах это…`).
+That is not how the Russian audience thinks about work. See
+`communication/RUSSIAN_ANTI_PATTERNS.md`.
+
 ---
 
 ## 6. Preserve the Research Shape

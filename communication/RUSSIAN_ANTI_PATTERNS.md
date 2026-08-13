@@ -229,7 +229,39 @@ The reader should recognize a real work situation, not a placeholder.
 
 ---
 
-## 8. Anti-Pattern Pass
+## 8. Pattern: Thinking in Slides
+
+Do not describe Russian work as if people think, argue, or decide "on slides".
+
+Avoid:
+
+```text
+В слайдах это «стейкхолдеры с разными приоритетами».
+На слайде мы для пользователя.
+В презентации это выглядит как стратегия.
+```
+
+Why it is weak:
+
+- it copies a Silicon Valley / consulting habit;
+- in a Russian work context people argue in совещаниях, письмах, защитах
+  перед руководством, в бэклоге и в договоре, not in a deck;
+- "слайд" becomes a fake concrete detail.
+
+Prefer the actual place of the argument:
+
+```text
+В красивой речи это «разные интересы участников».
+На защите перед руководством это звучит как стратегия.
+В договоре и на совещании побеждает тот, кто ставит подпись.
+```
+
+Also avoid nearby props of the same habit: "колода", "питч-дек", "сторилайн
+презентации", unless the artifact under study really is a presentation.
+
+---
+
+## 9. Anti-Pattern Pass
 
 Before publishing or handing off a draft, scan for:
 
@@ -240,7 +272,8 @@ Before publishing or handing off a draft, scan for:
 - "может привести к";
 - unnecessary "не только, но и";
 - decorative participial adverb phrases;
-- abstract placeholder product examples.
+- abstract placeholder product examples;
+- slide / deck metaphors for how people think ("в слайдах это…").
 
 For each match, ask:
 
@@ -262,7 +295,7 @@ After this pass, run `skills/humanize-ru`, then the portable humanizer pass from
 
 ---
 
-## 9. Summary
+## 10. Summary
 
 The short version:
 

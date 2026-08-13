@@ -166,6 +166,11 @@ Do not translate terms mechanically if the Russian version sounds artificial.
 
 Do not use English to sound more sophisticated.
 
+Do not keep English corporate slogans when Russian already names the same
+thing. Prefer Russian over `customer-centricity`, `stakeholder`, `alignment`,
+`churn` as decoration. Domain words stay if they are how the audience actually
+speaks (`security`, `комплаенс`, `ЛПР`).
+
 Use the term that makes the thought clearer.
 
 When writing in Russian, do not copy English explanatory syntax. Check
@@ -233,8 +238,12 @@ Avoid openings like:
 - "В эпоху цифровой трансформации...";
 - "Каждый продуктовый менеджер должен...";
 - "Это не просто...";
+- "В слайдах это...";
+- "На слайде мы...";
 
 These phrases usually signal that the text has not found its real tension yet.
+Do not frame Russian work as if decisions live in presentations. Use the real
+arena: совещание, защита перед руководством, договор, бэклог, переписка.
 
 ---
 
