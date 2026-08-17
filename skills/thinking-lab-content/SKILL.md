@@ -261,7 +261,8 @@ Before returning a public-facing draft or humanized text, scan for:
 - unnecessary `не только, но и`;
 - participial adverb phrases that blur the main action;
 - abstract placeholder product examples;
-- slide / deck metaphors (`в слайдах это…`).
+- slide / deck metaphors (`в слайдах это…`);
+- `экран` standing in for a UX-сценарий.
 
 Rewrite using:
 

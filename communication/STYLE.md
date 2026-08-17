@@ -339,9 +339,9 @@ Prefer a causal, concrete explanation:
 разговоре слишком поздно.
 ```
 
-The same rule applies to product examples. Do not use abstract placeholder
-examples such as "добавили настройку", "улучшили экран", or "ускорили
-сценарий" when a concrete product situation would be more human.
+The same rule applies to product examples. Do not reduce user work to a
+screen: write `UX-сценарий` and the job the person is trying to finish, not
+`понятный экран` or `улучшили экран`.
 
 See `RUSSIAN_ANTI_PATTERNS.md` for the highest-priority rules,
 `skills/humanize-ru` for register-safe AI-marker cleanup, and

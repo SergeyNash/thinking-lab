@@ -229,7 +229,36 @@ The reader should recognize a real work situation, not a placeholder.
 
 ---
 
-## 8. Pattern: Thinking in Slides
+## 8. Pattern: Reducing UX to a Screen
+
+Do not write `экран` when the point is the user's path through the product.
+
+`экран` is a UI fragment. The reader needs the UX-сценарий: the sequence a
+person goes through to finish a job.
+
+Avoid:
+
+```text
+понятный экран
+неудобный экран
+улучшили экран
+```
+
+Prefer:
+
+```text
+понятный UX-сценарий
+неудобный UX-сценарий, из-за которого человек не может закрыть свою работу
+сценарий короче и понятнее
+```
+
+The same reduction happens with `кнопка` and `интерфейс`, if they stand in for
+the job the user is trying to complete. Name the scenario and the work, not
+the widget.
+
+---
+
+## 9. Pattern: Thinking in Slides
 
 Do not describe Russian work as if people think, argue, or decide "on slides".
 
@@ -261,7 +290,7 @@ Also avoid nearby props of the same habit: "колода", "питч-дек", "�
 
 ---
 
-## 9. Anti-Pattern Pass
+## 10. Anti-Pattern Pass
 
 Before publishing or handing off a draft, scan for:
 
@@ -273,7 +302,8 @@ Before publishing or handing off a draft, scan for:
 - unnecessary "не только, но и";
 - decorative participial adverb phrases;
 - abstract placeholder product examples;
-- slide / deck metaphors for how people think ("в слайдах это…").
+- slide / deck metaphors for how people think ("в слайдах это…");
+- `экран` or `кнопка` standing in for a UX-сценарий.
 
 For each match, ask:
 
@@ -295,7 +325,7 @@ After this pass, run `skills/humanize-ru`, then the portable humanizer pass from
 
 ---
 
-## 10. Summary
+## 11. Summary
 
 The short version:
 
