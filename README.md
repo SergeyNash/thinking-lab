@@ -12,6 +12,11 @@ Thinking Lab — это не Telegram-канал, не LinkedIn-блог и не
 Публикации здесь являются результатом работы системы.
 Цель системы — понимание.
 
+Практическая база Telegram-канала вынесена в
+[`telegram-channel/`](telegram-channel/). Там лежат актуальные правила работы,
+банк тем, исследования, черновики, опубликованные тексты и иллюстрации. Старая
+структура ниже сохраняется как исследовательская архитектура проекта.
+
 ---
 
 ## Что это
@@ -638,6 +643,10 @@ skills/
 
 outputs/
   draft and output artifacts
+
+telegram-channel/
+  practical Telegram workspace
+  drafts, published posts, research and assets
 
 context/
   Thinking_Lab_Discussion_Summary.md
