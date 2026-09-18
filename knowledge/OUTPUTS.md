@@ -140,17 +140,19 @@ Publication surface: LinkedIn
 Link or location: none  
 What changed after publication: not applicable
 
-## Продуктовость PostgreSQL - Telegram note
+## Как PostgreSQL превратил расширяемость в продуктовую стратегию - Telegram note
 
 Status: draft  
 Format: Telegram note  
 Requested output type: telegram_note
 Actual output decision: telegram_note
 Language: Russian  
-Related research: Light research pass on PostgreSQL extensibility  
+Related research: PostgreSQL extensibility architecture and 2026 Datadog
+production telemetry  
 Related topic: PostgreSQL как расширяемая продуктовая платформа  
-Core principle: Долговечная платформа снижает цену будущих архитектурных
-решений и оставляет пользователю недорогой путь к новым сценариям.  
+Core principle: Стабильное ядро и точки расширения позволяют экосистеме
+проверять новые сценарии, а пользователю — отложить дорогую специализацию до
+появления реальных ограничений.  
 Audience: инженеры, продуктовые лидеры и руководители разработки.  
 Publication surface: Telegram  
 Link or location: `outputs/telegram/produktovost-postgresql.md`  
